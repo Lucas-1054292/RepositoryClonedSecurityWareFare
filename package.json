@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
-    "dev:frontend": "vite frontend",
-    "dev:backend": "docker-compose up --build --menu=0",
-    "build": "vite build",
+    "dev:backend": "docker compose up --build --menu=0",
+    "dev:frontend": "vite ./frontend",
+    "build": "vite ./build",
     "lint": "eslint .",
     "preview": "vite preview ./frontend"
   },
