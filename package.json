@@ -1,5 +1,5 @@
 {
-  "name": "wp4-2026-pwa-wp4-2026-pwa-1c2-hyena",
+  "name": "wp4-2026-pwa-1c2-hyena",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +7,7 @@
     "dev": "npm-run-all --parallel dev:*",
     "dev:backend": "docker compose up --build --menu=0",
     "dev:frontend": "vite ./frontend",
-    "build": "vite ./build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview ./frontend"
   },
