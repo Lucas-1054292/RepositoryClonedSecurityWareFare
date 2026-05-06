@@ -1,0 +1,237 @@
+/*=========basic settings for the whole page=========*/
+html, body{
+  background-color: #1e2029;
+  /*background-color: #f5f7fa;*/
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+/*=========dashboard layout=========*/
+.dashboard-layout {
+   margin: 0;
+   padding:0;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #FFFFFF;
+  /*color: #000;*/
+  background-color: #1e2029;
+  /*background-color: #f5f7fa;*/
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  grid-template-rows: auto 1fr auto;
+
+  grid-template-areas:
+  'header header'
+  'sidebar main';
+
+  grid-template-areas:
+  'sidebar header'
+  'sidebar main';
+
+  transition: grid-template-columns 0.3s ease;
+}
+/*=========expand sidebar=========*/
+body.sb-expand .dashboard-layout{
+  grid-template-columns: 12.5rem 1fr;
+
+}
+
+body.sb-expand .sidebar_navigation .title{
+  display: inline;
+}
+
+/*makes the logo a bit smaller while expanding the sidebar */
+body.sb-expand .logo img{
+  max-width: 80%;
+}
+
+/* =========header and main section=========*/
+.dashboard-header{
+  grid-area: header;
+  padding: 1.25rem;
+}
+
+.dashboard-main{
+  grid-area: main;
+  padding: 1.25rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3,1fr);
+
+}
+/*=========sidebar=========*/
+.dashboard-sidebar{
+  position: relative;
+  grid-area: sidebar;
+  background-color: #17181f;
+  /*background-color: #0E1347;*/
+  padding: 1.25rem;
+
+  margin: 0
+}
+
+.dashboard-sidebar button{
+  position:absolute;
+  inset: 4.5rem -0.75rem auto auto;
+  width: 1.5rem;
+  aspect-ratio: 1;
+  background-color: #a0a0a0;
+  border:transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.sidebar_navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0rem;
+    margin-top: 2rem;
+}
+
+.nav-item{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0.5rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  border-radius: 0.75rem;
+}
+
+.nav-item:hover{
+   /*background-color: #1D2587;*/
+  background-color: #2B2B3B;
+}
+
+.nav-item img{
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+.sidebar_navigation .title{
+  display: none;
+  white-space: nowrap;
+}
+
+
+/*=========logo=========*/
+.logo{
+  display :flex;
+  justify-content: center;
+  font-size: 3rem;
+  line-height: 1.3;
+}
+
+.logo img {
+  max-width:85%;
+  /*height: auto;*/
+  display: block;
+  transition: width 0.3s ease;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    align-self: start;
+    height: fit-content;
+}
+
+/* =========Mobile=========*/
+@media (max-width: 768px) {
+  /*=========dashboard=========*/
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar";
+  }
+
+  .dashboard-sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  .dashboard-sidebar > button {
+     display: none;
+
+  }
+
+  .dashboard-main {
+    grid-template-columns: 1fr;
+    padding-bottom: 5rem;
+  }
+
+  /*=========logo will go away in mobile=========*/
+  .logo, #resize {
+    display: none;
+  }
+
+  /*=========sidebar settings=========*/
+  .sidebar_navigation {
+    width: 100%;
+  }
+
+  .sidebar_navigation ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+  }
+
+  .nav-item {
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 0.7rem;
+  }
+
+
+  .sidebar_navigation .title {
+    display: none;
+  }
+}
+
+/*=========cards settings plus styling=========*/
+.card{
+  padding: 1.75rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08);
+  color: #000;
+
+}
+
+.card-link{
+  width: 100%;
+}
+
+.card-1{
+  background-image:
+    linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+}
+
+.card-2{
+  background-image:
+    linear-gradient(62deg, #c399f8 0%, #0078FF 100%);
+}
+
+.card-3{
+  background-image:
+    linear-gradient(62deg, #A3F593 0%, #22c1c3 100%);
+}
+
