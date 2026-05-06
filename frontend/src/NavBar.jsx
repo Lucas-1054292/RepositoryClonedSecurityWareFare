@@ -4,7 +4,7 @@ import informationImg from './assets/Information.svg';
 import homeImg from './assets/Home.svg';
 import projectsImg from './assets/Projects.svg';
 import { Link } from 'react-router-dom';
-import logoImg from './assets/hr.png'
+import logoImg from './assets/rac.png'
 
 
 function NavBar() {
