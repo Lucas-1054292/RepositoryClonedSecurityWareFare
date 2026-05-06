@@ -1,6 +1,6 @@
 {
   "short_name": "RAC-HR",
-  "name": "Racademic",
+  "name": "RACademic",
   "icons": [
     {
       "src": "",
@@ -16,5 +16,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "black",
-  "background_color": "white"}
-
+  "background_color": "white"
+}
