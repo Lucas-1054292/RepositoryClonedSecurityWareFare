@@ -243,7 +243,6 @@ body.sb-expand .logo img{
 }
 
 .projects-wrapper{
-
 }
 
 .projects-details-button {
@@ -256,7 +255,6 @@ body.sb-expand .logo img{
     font-weight: bold;
     font-size: 22px;
     text-decoration: none;
-    /*font-family: sans-serif;*/
     width: 150px;
     height: 50px;
     justify-content: center;
@@ -272,6 +270,33 @@ body.sb-expand .logo img{
   flex-wrap: wrap;
   grid-area: main;
   padding: 1.25rem;
-  gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
+}
+
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+    table-layout: fixed;
+}
+
+.projects-table thead{
+    background: #17181f;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding-bottom: 16px;
+}
+
+.projects-table th,
+.projects-table td {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.projects-table td {
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.projects-table tbody tr:hover {
+    background-color: #f8f9fa;
 }
