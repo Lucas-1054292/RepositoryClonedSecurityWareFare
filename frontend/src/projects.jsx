@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {Link} from "react-router-dom";
 
 function Projects() {
+  const [listings, setListings] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/listings")
+      .then((response) => response.json())
+      .then((data) => {
+        setListings(data);
+      })
+      .catch((error) => {
+        console.error("Error when fetching listings:", error);
+      })
+  }, [])
+
+
   return (
     <>
       {/*header*/}
@@ -10,7 +24,7 @@ function Projects() {
          <p>Hieronder vindt u een overzicht van al uw beschikbare projecten.</p>
         </header>
 
-        {/*main*/}
+      {/*main*/}
       <main className="projects-generic">
         <div class="project-wrapper">
           <table className="projects-table">
@@ -24,53 +38,22 @@ function Projects() {
             </thead>
 
             <tbody>
-            <tr className="card projects-card">
-              <td><h2>Backend Developer</h2></td>
-              <td><p>Bedrijfsnaam 1</p></td>
-              <td>
-                <button className="projects-details-button">Details</button>
-              </td>
-            </tr>
+            {listings.map((listing) => (
+                <tr key={listing.id} className="card projects-card">
+                  <td>
+                    <h2>{listing.title}</h2>
+                  </td>
 
-            <tr className="card projects-card">
-              <td><h2>Fullstack Developer</h2></td>
-              <td><p>Bedrijfsnaam 1</p></td>
-              <td>
-                <button className="projects-details-button">Details</button>
-              </td>
-            </tr>
+                  <td>
+                    <p>{listing.company.name}</p>
+                  </td>
 
-            <tr className="card projects-card">
-              <td><h2>Backend Developer</h2></td>
-              <td><p>Bedrijfsnaam 2</p></td>
-              <td>
-                <button className="projects-details-button">Details</button>
-              </td>
-            </tr>
-
-            <tr className="card projects-card">
-              <td><h2>Fullstack Developer</h2></td>
-              <td><p>Bedrijfsnaam 2</p></td>
-              <td>
-                <button className="projects-details-button">Details</button>
-              </td>
-            </tr>
-
-            <tr className="card projects-card">
-              <td><h2>Backend Developer</h2></td>
-              <td><p>Bedrijfsnaam 3</p></td>
-              <td>
-                <button className="projects-details-button">Details</button>
-              </td>
-            </tr>
-
-            <tr className="card projects-card">
-              <td><h2>Fullstack Developer</h2></td>
-              <td><p>Bedrijfsnaam 3</p></td>
-              <td>
-                <button className="projects-details-button">Details</button>
-              </td>
-            </tr>
+                  <td>
+                    <button className="projects-details-button">Details</button>
+                  </td>
+                </tr>
+              )
+            )}
           </tbody>
         </table>
         </div>
@@ -80,4 +63,3 @@ function Projects() {
 }
 
 export default Projects;
-
