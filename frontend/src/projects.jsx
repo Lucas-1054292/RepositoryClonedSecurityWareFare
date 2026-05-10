@@ -34,6 +34,7 @@ function Projects() {
               <th>Functie</th>
               <th>Bedrijf</th>
               <th>Acties</th>
+              <th>Link</th>
             </tr>
             </thead>
 
@@ -50,6 +51,9 @@ function Projects() {
 
                   <td>
                     <button className="projects-details-button">Details</button>
+                  </td>
+                  <td>
+                    <button className="projects-share-button">Share</button>
                   </td>
                 </tr>
               )
