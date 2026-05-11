@@ -300,3 +300,17 @@ body.sb-expand .logo img{
 .projects-table tbody tr:hover {
     background-color: #f8f9fa;
 }
+
+.projects-share-button{
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    background-color: #FFFDD0;
+    color: #000000;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    width: 150px;
+    height: 51px;
+}
