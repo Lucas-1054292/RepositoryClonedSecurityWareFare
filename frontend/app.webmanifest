@@ -1,6 +1,7 @@
 {
   "short_name": "RAC-HR",
   "name": "RACademic",
+  "scope": "/",
   "icons": [
     {
       "src": "/rac_192x192.png",
