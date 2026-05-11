@@ -49,9 +49,9 @@ function NavBar() {
         </li>
 
         <li>
-          <Link to= "/Information" className='nav-item' >
+          <Link to= "/..." className='nav-item' >
             <img src={informationImg} alt=""/>
-            <span className="title">Informatie</span>
+            <span className="title">...</span>
             </Link>
         </li>
       </ul>

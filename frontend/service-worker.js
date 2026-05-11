@@ -10,6 +10,16 @@ self.addEventListener("install", (event) => {
         ]),
       ),
   );
+  self.skipWaiting(); // activate immediately, don't wait for tabs to close
+});
+
+self.addEventListener('activate', (event)=>{
+  event.waitUntil(
+    caches.keys().then((keys) =>
+    Promise.all(keys.filter(k => k !== 'v1').map(k => caches.delete(k))) // delete old caches
+  )
+);
+  self.clients.claim(); // take control of all open pages
 });
 
 const cacheFirst = async event => {
@@ -17,9 +27,10 @@ const cacheFirst = async event => {
   const cachedResponse = await caches.match(event.request); //bij asynchrone functies moet je vaak of altijd afwachten
   //then if found, return that entry,
   if (cachedResponse !== undefined) {
-    return cachedResponse;
+    return cachedResponse; // return cached version if found
   }
 
+  try {
   //otherwise, go to network,
   const networkResponse = await fetch(event.request);
   // return networkEntry
@@ -27,8 +38,11 @@ const cacheFirst = async event => {
     caches
       .open('v1')
       .then(cache => cache.put(event.request, networkResponse.clone()));
+    }
+    return networkResponse
+  } catch {
+    return caches.match('/index.html'); // offline fallback
   }
-  return networkResponse;
 };
 
 const networkFirst = async (event) => {

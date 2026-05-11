@@ -17,15 +17,15 @@ function Home() {
             </article>
             </Link>
 
-            <Link to="/Information" className="card-link">
+            <Link to="/..." className="card-link">
             <article className="card card-2">
-                <h2>Informatie</h2>
+                <h2>...</h2>
             </article>
             </Link>
 
-           <Link to="/Inbox" className="card-link">
+           <Link to="/..." className="card-link">
             <article className="card card-3">
-              <h2>Inbox</h2>
+              <h2>...</h2>
             </article>
             </Link>
         </main>
