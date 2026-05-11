@@ -3,11 +3,12 @@ import { Link, useNavigate} from "react-router-dom";
 
 function Projects() {
   const [listings, setListings] = useState([]);
-  const navigate = useNavigate();
+  const navigate = useNavigate(); //create navigate function
 
+  //variable with a function to later navigate to projects-details page while giving the id with it that later is defined when the button is clicked
   const handleDetails = (id) => {
     navigate("/projects-details", {
-      state: { listingId: id},
+      state: { listingId: id}, // the data to send to the projects-details page
     });
   };
 
@@ -53,6 +54,7 @@ function Projects() {
             </thead>
 
             <tbody>
+            {/* map is used here to execute the code below on every item of the array from the API*/}
             {listings.map((listing) => (
                 <tr key={listing.id} className="card projects-card">
                   <td>
@@ -64,9 +66,8 @@ function Projects() {
                   </td>
 
                   <td>
-                    {/*<Link to="/projects-details" className="card-link">*/}
+                    {/* When the button below is clicked then that listing id is used to send to the projects-details page*/}
                     <button className="projects-details-button" onClick={() => handleDetails(listing.id)}>Details</button>
-                    {/*</Link>*/}
                   </td>
                   <td>
 

@@ -246,6 +246,7 @@ body.sb-expand .logo img{
 .projects-share-button{
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     padding: 0.6rem 1rem;
     background-color: #FFFDD0;
     color: #000000;
@@ -256,8 +257,9 @@ body.sb-expand .logo img{
     width: 150px;
     height: 50px;
 }
-.projects-share-button:hover{
-  background-color: #808080;
+
+.projects-share-button:hover {
+    background-color: #808080 ;
 }
 
 /* =========Mobile=========*/
