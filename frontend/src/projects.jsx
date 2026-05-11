@@ -68,11 +68,6 @@ function Projects() {
                     <button className="projects-details-button" onClick={() => handleDetails(listing.id)}>Details</button>
                     {/*</Link>*/}
                   </td>
-
-                  <td>
-                    <button className="projects-share-button">Deel</button>
-                  </td>
-
                   <td>
                     <button
                       className="projects-share-button"
