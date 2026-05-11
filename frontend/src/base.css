@@ -147,64 +147,6 @@ body.sb-expand .logo img{
     height: fit-content;
 }
 
-/* =========Mobile=========*/
-@media (max-width: 768px) {
-  /*=========dashboard=========*/
-  .dashboard-layout {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "main"
-      "sidebar";
-  }
-
-  .dashboard-sidebar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    padding: 0.5rem 0;
-    display: flex;
-    justify-content: space-around;
-  }
-  .dashboard-sidebar > button {
-     display: none;
-
-  }
-
-  .dashboard-main {
-    grid-template-columns: 1fr;
-    padding-bottom: 5rem;
-  }
-
-  /*=========logo will go away in mobile=========*/
-  .logo, #resize {
-    display: none;
-  }
-
-  /*=========sidebar settings=========*/
-  .sidebar_navigation {
-    width: 100%;
-  }
-
-  .sidebar_navigation ul {
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-  }
-
-  .nav-item {
-    flex-direction: column;
-    gap: 0.2rem;
-    font-size: 0.7rem;
-  }
-
-
-  .sidebar_navigation .title {
-    display: none;
-  }
-}
 
 /*=========cards settings plus styling=========*/
 .card{
@@ -299,4 +241,76 @@ body.sb-expand .logo img{
 
 .projects-table tbody tr:hover {
     background-color: #f8f9fa;
+}
+
+.projects-share-button{
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    background-color: #FFFDD0;
+    color: #000000;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    width: 150px;
+    height: 50px;
+}
+/* =========Mobile=========*/
+@media (max-width: 768px) {
+  /*=========dashboard=========*/
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar";
+  }
+
+  .dashboard-sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  .dashboard-sidebar > button {
+     display: none;
+
+  }
+
+  .dashboard-main {
+    grid-template-columns: 1fr;
+    padding-bottom: 5rem;
+  }
+
+  /*=========logo will go away in mobile=========*/
+  .logo, #resize {
+    display: none;
+  }
+
+  /*=========sidebar settings=========*/
+  .sidebar_navigation {
+    width: 100%;
+  }
+
+  .sidebar_navigation ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+  }
+
+  .nav-item {
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 0.7rem;
+  }
+
+
+  .sidebar_navigation .title {
+    display: none;
+  }
 }

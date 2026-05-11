@@ -41,6 +41,7 @@ function Projects() {
               <th>Functie</th>
               <th>Bedrijf</th>
               <th>Acties</th>
+              <th>Delen</th>
             </tr>
             </thead>
 
@@ -59,6 +60,10 @@ function Projects() {
                     {/*<Link to="/projects-details" className="card-link">*/}
                     <button className="projects-details-button" onClick={() => handleDetails(listing.id)}>Details</button>
                     {/*</Link>*/}
+                  </td>
+
+                  <td>
+                    <button className="projects-share-button">Deel</button>
                   </td>
                 </tr>
               )
