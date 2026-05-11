@@ -65,6 +65,9 @@ function Projects() {
                   <td>
                     <button className="projects-share-button">Deel</button>
                   </td>
+                  <td>
+                    <button className="projects-share-button">Share</button>
+                  </td>
                 </tr>
               )
             )}
