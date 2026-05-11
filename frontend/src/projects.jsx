@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
-import {Link} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 
 function Projects() {
   const [listings, setListings] = useState([]);
+  const navigate = useNavigate();
+
+  const handleDetails = (id) => {
+    navigate("/projects-details", {
+      state: { listingId: id},
+    });
+  };
 
   useEffect(() => {
     fetch("http://localhost:8000/listings")
@@ -26,7 +33,7 @@ function Projects() {
 
       {/*main*/}
       <main className="projects-generic">
-        <div class="project-wrapper">
+        <div className="project-wrapper">
           <table className="projects-table">
 
             <thead>
@@ -49,7 +56,9 @@ function Projects() {
                   </td>
 
                   <td>
-                    <button className="projects-details-button">Details</button>
+                    {/*<Link to="/projects-details" className="card-link">*/}
+                    <button className="projects-details-button" onClick={() => handleDetails(listing.id)}>Details</button>
+                    {/*</Link>*/}
                   </td>
                 </tr>
               )
