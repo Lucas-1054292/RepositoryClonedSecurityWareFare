@@ -10,7 +10,7 @@ function App() {
         <NavBar />
           <Routes>
             <Route path="/" element={<Home/>} />
-            {/* Hier komen later de andere routes zoals /projects */}
+            {/* here will come the routes like /projects */}
           </Routes>
         </div>
     </BrowserRouter>
