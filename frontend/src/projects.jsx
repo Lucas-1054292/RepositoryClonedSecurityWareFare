@@ -69,6 +69,7 @@ function Projects() {
                     {/*</Link>*/}
                   </td>
                   <td>
+
                     <button
                       className="projects-share-button"
                       onClick={() => handleShare(listing.id)}

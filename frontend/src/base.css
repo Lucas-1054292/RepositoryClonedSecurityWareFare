@@ -259,6 +259,7 @@ body.sb-expand .logo img{
 .projects-share-button:hover{
   background-color: #808080;
 }
+
 /* =========Mobile=========*/
 @media (max-width: 768px) {
   /*=========dashboard=========*/
