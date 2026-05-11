@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 function Projects() {
   const [listings, setListings] = useState([]);
-
+  const [copiedId, setCopiedId] = useState(null); // Hhoudt bij welk project uit de lijst gekopieërd is
   useEffect(() => {
     fetch("http://localhost:8000/listings")
       .then((response) => response.json())
@@ -14,7 +14,13 @@ function Projects() {
         console.error("Error when fetching listings:", error);
       })
   }, [])
-
+  const handleShare = (id) => {
+    const url = `${window.location.origin}/listings/${id}`;
+    navigator.clipboard.writeText(url).then(() => {
+      setCopiedId(id);
+      setTimeout(() => setCopiedId(null), 2000); // wordt gereset na 2 seconden
+    });
+  };
 
   return (
     <>
@@ -53,7 +59,12 @@ function Projects() {
                     <button className="projects-details-button">Details</button>
                   </td>
                   <td>
-                    <button className="projects-share-button">Share</button>
+                    <button
+                      className="projects-share-button"
+                      onClick={() => handleShare(listing.id)}
+                    >
+                      {copiedId === listing.id ? "Copied ✓" : "Share"}
+                      </button>
                   </td>
                 </tr>
               )
