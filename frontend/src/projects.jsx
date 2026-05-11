@@ -34,7 +34,7 @@ function Projects() {
               <th>Functie</th>
               <th>Bedrijf</th>
               <th>Acties</th>
-              <th>Link</th>
+              <th>Delen</th>
             </tr>
             </thead>
 
