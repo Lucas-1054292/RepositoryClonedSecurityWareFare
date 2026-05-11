@@ -185,6 +185,8 @@ body.sb-expand .logo img{
 }
 
 .projects-wrapper{
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .projects-details-button {
@@ -195,10 +197,10 @@ body.sb-expand .logo img{
     color: #000000;
     border-radius: 0.5rem;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 16px;
     text-decoration: none;
-    width: 150px;
-    height: 50px;
+    width: 120px;
+    height: 40px;
     justify-content: center;
 }
 
@@ -218,7 +220,7 @@ body.sb-expand .logo img{
 .projects-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 18px;
+    font-size: 16px;
     table-layout: fixed;
 }
 
@@ -229,6 +231,16 @@ body.sb-expand .logo img{
     padding-bottom: 16px;
 }
 
+.projects-table thead tr th:first-child{
+  border-radius: 1rem 0 0 ;
+}
+
+.projects-table thead tr th:last-child{
+  border-radius: 0 1rem 0 ;
+}
+
+
+
 .projects-table th,
 .projects-table td {
     padding: 10px 20px;
@@ -236,7 +248,16 @@ body.sb-expand .logo img{
 }
 
 .projects-table td {
-    border-bottom: 2px solid #e0e0e0;
+    border-top: 2px solid #e0e0e0;
+}
+.projects-table tbody tr:last-child td:first-child{
+  border-radius: 0 0 0 1rem;
+  border-bottom:none;
+}
+
+.projects-table tbody tr:last-child td:last-child{
+  border-radius: 0 0 1rem 0;
+  border-bottom:none;
 }
 
 .projects-table tbody tr:hover {
@@ -246,16 +267,27 @@ body.sb-expand .logo img{
 .projects-share-button{
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     padding: 0.6rem 1rem;
     background-color: #FFFDD0;
     color: #000000;
     border-radius: 0.5rem;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 16px;
     text-decoration: none;
-    width: 150px;
-    height: 50px;
+    width: 120px;
+    height: 40px;
 }
+
+.projects-details-button:disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.projects-share-button:hover {
+    background-color: #808080 ;
+}
+
 /* =========Mobile=========*/
 @media (max-width: 768px) {
   /*=========dashboard=========*/

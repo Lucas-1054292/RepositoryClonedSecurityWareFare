@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import {Link, useLocation } from "react-router-dom";
-
+import Apply from "./application.jsx"
 
 function ProjectDetails() {
   const [listing, setProject] = useState(null);
 
-  const location = useLocation();
-  const listingId = location.state?.listingId;
+  const location = useLocation(); // location gives information about the page, later used to get the id from the listing
+  const listingId = location.state?.listingId; // if the state exists then it accesses the listingId
 
   useEffect(() => {
-    if (!listingId) return;
+    if (!listingId) return; // this is to prevent errors if the user types the route in the browser instead of through /projects and through the details button
 
     fetch(`http://localhost:8000/listings/${listingId}`)
       .then((response) => response.json())
@@ -19,7 +19,7 @@ function ProjectDetails() {
       .catch((error) => {
         console.error("Error when fetching listing id:", error);
       })
-  }, [listingId])
+  }, [listingId]) //this is used so that when the id changes (by navigation to a different listing for example) it gives back a different fetched listing
 
 
   return (
@@ -47,7 +47,7 @@ function ProjectDetails() {
             </thead>
 
             <tbody>
-            {listing && (
+            {listing && ( //if the listing exists and is correctly fetched then execute the code below
                 <tr className="card projects-card">
                   <td>
                     <h2>{listing.title}</h2>
@@ -68,7 +68,8 @@ function ProjectDetails() {
                   <td>{listing.contact.email}</td>
 
                   <td>
-                    <button className="projects-details-button">Solliciteren</button>
+                    <Apply
+                      listingId={listingId} email={listing.contact.email} companyName={listing.company.name}/>
                   </td>
                 </tr>
             )}
