@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {Link, useLocation } from "react-router-dom";
-
+import Apply from "./application.jsx"
 
 function ProjectDetails() {
   const [listing, setProject] = useState(null);
@@ -68,7 +68,8 @@ function ProjectDetails() {
                   <td>{listing.contact.email}</td>
 
                   <td>
-                    <button className="projects-details-button">Solliciteren</button>
+                    <Apply
+                      listingId={listingId} email={listing.contact.email} companyName={listing.company.name}/>
                   </td>
                 </tr>
             )}
