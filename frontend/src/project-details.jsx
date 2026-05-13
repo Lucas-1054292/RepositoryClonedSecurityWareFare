@@ -47,20 +47,14 @@ function ProjectDetails() {
             </thead>
 
             <tbody>
-            {listing && ( //if the listing exists and is correctly fetched then execute the code below
+            {listing && (   //if the listing exists and is correctly fetched then execute the code below
                 <tr className="card projects-card">
                   <td>
                     <h2>{listing.title}</h2>
                   </td>
 
                   <td>
-                    <p>Als {listing.title} bij {listing.company.name} verwachten wij een gedreven student met ervaring in onder andere: </p>
-                    <br/>
-                    <ul>
-                      <li>React, Python, Javascript, SQL</li>
-                      <li>Ervaring met Agile frameworks zoals Scrum is een pré</li>
-                      <li>Ervaring met datamodellering zoals ERD's is een pré</li>
-                    </ul>
+                    <p>{listing.description}</p>
                   </td>
 
                   <td>{listing.start_date}</td>
