@@ -12,8 +12,8 @@ function Projects() {
     });
   };
 
-  const [copiedId, setCopiedId] = useState(null); // Hhoudt bij welk project uit de lijst gekopieërd is
-  useEffect(() => {
+  const [copiedId, setCopiedId] = useState(null); // Houdt bij welk project uit de lijst gekopieërd is, begint met een waarde van null en wordt ingesteld op het id van de gekopieërde waarde als de gebruiker op de knop drukt
+  useEffect(() => {     // Deze functie haalt alle informatie op van de lokale backend en slaat de informatie op met setListings
     fetch("http://localhost:8000/listings")
       .then((response) => response.json())
       .then((data) => {
@@ -23,11 +23,11 @@ function Projects() {
         console.error("Error when fetching listings:", error);
       })
   }, [])
-  const handleShare = (id) => {
-    const url = `${window.location.origin}/listings/${id}`;
-    navigator.clipboard.writeText(url).then(() => {
-      setCopiedId(id);
-      setTimeout(() => setCopiedId(null), 2000); // wordt gereset na 2 seconden
+  const handleShare = (id) => {   //Deze functie wordt aangeroepen als de gebruiker een bepaald project wil delen.
+    const url = `${window.location.origin}/listings/${id}`; // Het bouwt een deelbare URL
+    navigator.clipboard.writeText(url).then(() => { //kopieërd de URL naar het klemboord via navigator.clipboard
+      setCopiedId(id);                                    //Maakt van copiedId het id van de net opgehaalde URL
+      setTimeout(() => setCopiedId(null), 2000); // Reset copiedId na 2 seconden weer terug naar de waarde null, zodat de bevestiging verdwijnt
     });
   };
 
