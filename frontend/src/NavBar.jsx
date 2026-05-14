@@ -1,5 +1,4 @@
 import React  from "react";
-import {useState, useEffect} from "react";
 import informationImg from './assets/Information.svg';
 import homeImg from './assets/Home.svg';
 import projectsImg from './assets/Projects.svg';
@@ -7,17 +6,8 @@ import { Link } from 'react-router-dom';
 import logoImg from './assets/rac.png'
 
 
-function NavBar() {
-  const[isExpanded, setIsExpanded] = useState(false);
+function NavBar({isExpanded, setIsExpanded}) {
 
-
-  useEffect(() => {
-    if (isExpanded){
-      document.body.classList.add('sb-expand');
-    }else{
-      document.body.classList.remove('sb-expand');
-    }
-  },[isExpanded]);
   const toggleSidebar = () =>{
     setIsExpanded(!isExpanded);
   };
