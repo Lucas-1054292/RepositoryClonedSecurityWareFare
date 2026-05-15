@@ -40,10 +40,10 @@ html, body{
 
   transition: grid-template-columns 0.3s ease;
 }
+
 /*=========expand sidebar=========*/
 .dashboard-layout.sb-expand {
   grid-template-columns: 12.5rem 1fr;
-
 }
 
 .dashboard-layout.sb-expand .title{
