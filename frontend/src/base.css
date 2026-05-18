@@ -40,18 +40,18 @@ html, body{
 
   transition: grid-template-columns 0.3s ease;
 }
-/*=========expand sidebar=========*/
-body.sb-expand .dashboard-layout{
-  grid-template-columns: 12.5rem 1fr;
 
+/*=========expand sidebar=========*/
+.dashboard-layout.sb-expand {
+  grid-template-columns: 12.5rem 1fr;
 }
 
-body.sb-expand .sidebar_navigation .title{
+.dashboard-layout.sb-expand .title{
   display: inline;
 }
 
 /*makes the logo a bit smaller while expanding the sidebar */
-body.sb-expand .logo img{
+.dashboard-layout.sb-expand .logo img{
   max-width: 80%;
 }
 
