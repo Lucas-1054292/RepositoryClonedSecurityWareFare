@@ -202,6 +202,7 @@ html, body{
     width: 120px;
     height: 40px;
     justify-content: center;
+    border: none;
 }
 
 .projects-details-button:hover {
@@ -277,6 +278,7 @@ html, body{
     text-decoration: none;
     width: 120px;
     height: 40px;
+    border: none;
 }
 
 .projects-details-button:disabled{
@@ -344,5 +346,42 @@ html, body{
 
   .sidebar_navigation .title {
     display: none;
+  }
+
+  /*========= projects and project details=========*/
+
+  /* hide the thead on mobile */
+  .projects-table thead {
+    display: none;
+  }
+
+  /* convert the table to block-layout */
+  .projects-table,
+  .projects-table tbody,
+  .projects-table tr,
+  .projects-table td {
+    display: block;
+    width: 100%;
+  }
+
+  /* each row becomes a card */
+  .projects-table tbody tr {
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-image: linear-gradient(62deg, #c399f8 0%, #3e1496 100%);
+    border: none;
+  }
+
+  .projects-table td {
+    border-top: none;
+    padding: 0.4rem 0.5rem;
+    text-align: left;
+  }
+
+  .projects-details-button,
+  .projects-share-button {
+    width: 100%;
+    margin-top: 0.5rem;
   }
 }
