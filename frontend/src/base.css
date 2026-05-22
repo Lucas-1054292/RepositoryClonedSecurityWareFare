@@ -410,10 +410,14 @@ html, body{
 
   .search-bar input{
       width: 100%;
-      height: 40%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      max-width: 365px; /* Set max width for mobile styling to work correctly with desktop styling */
+      height: 5%;
+
+      /* Added the 3 lines below for mobile styling to work correctly with desktop styling */
+      position: fixed;
+      bottom: 6rem;
+      top: auto;
+
       border-radius: 0.5rem;
       background: #FFFDD0;
       border: solid #808080;
