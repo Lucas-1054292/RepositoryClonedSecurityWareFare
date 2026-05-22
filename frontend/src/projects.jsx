@@ -63,7 +63,6 @@ function Projects() {
                   <td>
                     <p>{listing.company.name}</p>
                   </td>
-
                   <td>
                     {/* When the button below is clicked then that listing id is used to send to the projects-details page*/}
                     <button className="projects-details-button" onClick={() => handleDetails(listing.id)}>Details</button>
