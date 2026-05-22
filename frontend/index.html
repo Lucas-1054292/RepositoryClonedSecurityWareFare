@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="/app.webmanifest"/>
+<!--    <link rel="manifest" href="/app.webmanifest"/>-->
     <title>WP4</title>
   </head>
 
@@ -12,14 +12,14 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
 <!--    <script type="module" src="./sw.js"></script>-->
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("service-worker.js", {
-          scope: "./",
-        })
-        .then(result => console.log(result))
-    }
-  </script>
+<!--  <script>-->
+<!--    if ("serviceWorker" in navigator) {-->
+<!--      navigator.serviceWorker-->
+<!--        .register("service-worker.js", {-->
+<!--          scope: "./",-->
+<!--        })-->
+<!--        .then(result => console.log(result))-->
+<!--    }-->
+<!--  </script>-->
   </body>
 </html>
