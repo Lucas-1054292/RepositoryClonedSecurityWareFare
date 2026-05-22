@@ -60,7 +60,6 @@ function Projects() {
                   <td>
                     <h2>{listing.title}</h2>
                   </td>
-
                   <td>
                     <p>{listing.company.name}</p>
                   </td>
