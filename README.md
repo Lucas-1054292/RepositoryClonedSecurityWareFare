@@ -1,7 +1,9 @@
 # Werkplaats 4 - Progressive Web Apps
 
 -Team notes: 
-command die als eerst geinstalleerd moet worden: npm install react-router-dom
+Als eerst moeten deze commands geinstalleerd worden:
+1. npm install
+2. npm install react-router-dom
 
 > [!NOTE]
 > Bij inleveren moet hier het volgende staan:
