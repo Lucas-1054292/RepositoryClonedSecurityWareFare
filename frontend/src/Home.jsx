@@ -17,9 +17,9 @@ function Home() {
             </article>
             </Link>
 
-            <Link to="/..." className="card-link">
+            <Link to="/saved-projects" className="card-link">
             <article className="card card-2">
-                <h2>...</h2>
+                <h2>Opgeslagen</h2>
             </article>
             </Link>
 
