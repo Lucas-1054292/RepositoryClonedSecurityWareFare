@@ -195,7 +195,7 @@ html, body{
     padding: 0.6rem 1rem;
     background-color: #FFFDD0;
     color: #000000;
-    border-radius: 0.5rem;
+    border-radius: 1.0rem;
     font-weight: bold;
     font-size: 16px;
     text-decoration: none;
@@ -203,6 +203,8 @@ html, body{
     height: 40px;
     justify-content: center;
     border: none;
+    border-width: 0.75rem;
+
 }
 
 .projects-details-button:hover {
@@ -262,7 +264,7 @@ html, body{
 }
 
 .projects-table tbody tr:hover {
-    background-color: #f8f9fa;
+    background-color: #808080;
 }
 
 .projects-share-button{
@@ -272,18 +274,20 @@ html, body{
     padding: 0.6rem 1rem;
     background-color: #FFFDD0;
     color: #000000;
-    border-radius: 0.5rem;
+    border-radius: 1.0rem;
+    border-width: 0.75rem;
     font-weight: bold;
     font-size: 16px;
     text-decoration: none;
     width: 120px;
     height: 40px;
-    border: none;
+    border: none
 }
 
 .projects-details-button:disabled{
   opacity: 0.5;
   cursor: not-allowed;
+
 }
 
 .projects-share-button:hover {
@@ -403,9 +407,10 @@ html, body{
   .projects-share-button {
     width: 100%;
     margin-top: 0.5rem;
+    border-width: 5px;
   }
   .saved-card-text{
-    color: #000;
+    color: #000000;
   }
 
   .search-bar input{
