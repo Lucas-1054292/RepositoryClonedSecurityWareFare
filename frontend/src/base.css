@@ -294,6 +294,26 @@ html, body{
     background-color: #808080 ;
 }
 
+.search-bar input{
+    width: 10%;
+    height: 5%;
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    border-radius: 0.5rem;
+    background: #FFFDD0;
+    border: solid #808080;
+    text-align: center;
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+}
+
+.search-bar input::placeholder {
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
 /* =========Mobile=========*/
 @media (max-width: 768px) {
   /*=========dashboard=========*/
@@ -391,5 +411,29 @@ html, body{
   }
   .saved-card-text{
     color: #000000;
+  }
+
+  .search-bar input{
+      width: 100%;
+      max-width: 365px; /* Set max width for mobile styling to work correctly with desktop styling */
+      height: 5%;
+
+      /* Added the 3 lines below for mobile styling to work correctly with desktop styling */
+      position: fixed;
+      bottom: 6rem;
+      top: auto;
+
+      border-radius: 0.5rem;
+      background: #FFFDD0;
+      border: solid #808080;
+      text-align: center;
+      font-family: system-ui, sans-serif;
+      font-size: 1rem;
+  }
+
+  .search-bar input::placeholder {
+      font-family: system-ui, sans-serif;
+      font-size: 1rem;
+      text-align: center;
   }
 }
