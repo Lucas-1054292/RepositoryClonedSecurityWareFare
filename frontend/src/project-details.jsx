@@ -4,6 +4,7 @@ import Apply from "./application.jsx"
 
 function ProjectDetails() {
   const [listing, setProject] = useState(null);
+  const [isSaved, setIsSaved] = useState(false);
 
   const location = useLocation(); // location gives information about the page, later used to get the id from the listing
   const listingId = location.state?.listingId; // if the state exists then it accesses the listingId
@@ -14,6 +15,9 @@ function ProjectDetails() {
     fetch(`http://localhost:8000/listings/${listingId}`)
       .then((response) => response.json())
       .then((data) => {
+        const saved = JSON.parse(localStorage.getItem("savedProjects") || "[]"); // check in localstorage if this project is already saved.
+        const alreadySaved = saved.some((p) => p.id === listingId)
+        setIsSaved(alreadySaved);
         setProject(data);
       })
       .catch((error) => {
@@ -21,6 +25,24 @@ function ProjectDetails() {
       })
   }, [listingId]) //this is used so that when the id changes (by navigation to a different listing for example) it gives back a different fetched listing
 
+  const handleSave = () => {
+    if (!listing) return // prevent saving if listing data is not loaded yet
+
+    // get the current saved projects list from localstorage
+    const saved = JSON.parse(localStorage.getItem("savedProjects") || "[]");
+
+    // create a new project object with relevant data
+    const NewProject = {
+      id: listingId,
+      title: listing.title,
+      companyName: listing.company?.name
+    }
+
+    // add the new project to the list and save it in localstorage
+    const newList =[...saved, NewProject]
+    localStorage.setItem("savedProjects", JSON.stringify(newList))
+    setIsSaved(true) // update state so the button changes to "Opgeslagen"
+}
 
   return (
     <>
@@ -43,6 +65,7 @@ function ProjectDetails() {
               <th>Contactpersoon</th>
               <th>E-mailadres</th>
               <th>Acties</th>
+              <th>Opslaan</th>
             </tr>
             </thead>
 
@@ -64,6 +87,14 @@ function ProjectDetails() {
                   <td>
                     <Apply
                       listingId={listingId} email={listing.contact.email} companyName={listing.company.name}/>
+                  </td>
+
+                  {/*Save button, disabled when project is already saved*/}
+                  <td>
+                    <button
+                      onClick={handleSave} disabled={isSaved} className="projects-details-button ">
+                      {isSaved ? "Opgeslagen": "Opslaan"}
+                    </button>
                   </td>
                 </tr>
             )}

@@ -40,18 +40,18 @@ html, body{
 
   transition: grid-template-columns 0.3s ease;
 }
-/*=========expand sidebar=========*/
-body.sb-expand .dashboard-layout{
-  grid-template-columns: 12.5rem 1fr;
 
+/*=========expand sidebar=========*/
+.dashboard-layout.sb-expand {
+  grid-template-columns: 12.5rem 1fr;
 }
 
-body.sb-expand .sidebar_navigation .title{
+.dashboard-layout.sb-expand .title{
   display: inline;
 }
 
 /*makes the logo a bit smaller while expanding the sidebar */
-body.sb-expand .logo img{
+.dashboard-layout.sb-expand .logo img{
   max-width: 80%;
 }
 
@@ -202,6 +202,7 @@ body.sb-expand .logo img{
     width: 120px;
     height: 40px;
     justify-content: center;
+    border: none;
 }
 
 .projects-details-button:hover {
@@ -277,6 +278,7 @@ body.sb-expand .logo img{
     text-decoration: none;
     width: 120px;
     height: 40px;
+    border: none;
 }
 
 .projects-details-button:disabled{
@@ -344,5 +346,45 @@ body.sb-expand .logo img{
 
   .sidebar_navigation .title {
     display: none;
+  }
+
+  /*========= projects and project details=========*/
+
+  /* hide the thead on mobile */
+  .projects-table thead {
+    display: none;
+  }
+
+  /* convert the table to block-layout */
+  .projects-table,
+  .projects-table tbody,
+  .projects-table tr,
+  .projects-table td {
+    display: block;
+    width: 100%;
+  }
+
+  /* each row becomes a card */
+  .projects-table tbody tr {
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-image: linear-gradient(62deg, #c399f8 0%, #3e1496 100%);
+    border: none;
+  }
+
+  .projects-table td {
+    border-top: none;
+    padding: 0.4rem 0.5rem;
+    text-align: left;
+  }
+
+  .projects-details-button,
+  .projects-share-button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .saved-card-text{
+    color: #000;
   }
 }
