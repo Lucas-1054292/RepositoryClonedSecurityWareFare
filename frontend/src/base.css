@@ -384,4 +384,7 @@ html, body{
     width: 100%;
     margin-top: 0.5rem;
   }
+  .saved-card-text{
+    color: #000;
+  }
 }

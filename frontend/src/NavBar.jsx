@@ -39,9 +39,9 @@ function NavBar({isExpanded, setIsExpanded}) {
         </li>
 
         <li>
-          <Link to= "/..." className='nav-item' >
-            <img src={informationImg} alt=""/>
-            <span className="title">...</span>
+          <Link to= "/saved-projects" className='nav-item' >
+            <img src={informationImg} alt="saved-projects"/>
+            <span className="title">Opgeslagen</span>
             </Link>
         </li>
       </ul>

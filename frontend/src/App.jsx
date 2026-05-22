@@ -5,6 +5,7 @@ import {Routes, Route, BrowserRouter} from 'react-router-dom';
 import Projects from "./projects.jsx";
 import ProjectDetails from "./project-details.jsx";
 import {useState} from "react";
+import SavedProjects from "./SavedProjects.jsx";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/projects" element={<Projects/>} />
             <Route path="/projects-details" element={<ProjectDetails/>} />
+            <Route path="/saved-projects" element={<SavedProjects/>} />
             {/* Hier komen later de andere routes zoals /projects */}
           </Routes>
         </div>
