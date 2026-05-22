@@ -28,6 +28,10 @@ function Home() {
               <h2>...</h2>
             </article>
             </Link>
+
+            <div className="search-bar">
+              <input type="text" name="search" placeholder="Zoeken"/>
+            </div>
         </main>
     </>
   )
