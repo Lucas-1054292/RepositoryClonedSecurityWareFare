@@ -301,8 +301,8 @@ html, body{
     top: 1.5rem;
     right: 1.5rem;
     border-radius: 0.5rem;
-    background: #FFFDD0;
-    border: solid #808080;
+    background: #1A1A26;
+    border: solid #FFFFFF;
     text-align: center;
     font-family: system-ui, sans-serif;
     font-size: 1rem;
@@ -312,6 +312,7 @@ html, body{
     font-family: system-ui, sans-serif;
     font-size: 1rem;
     text-align: center;
+    color: #FFFFFF
 }
 
 /* =========Mobile=========*/
@@ -424,8 +425,8 @@ html, body{
       top: auto;
 
       border-radius: 0.5rem;
-      background: #FFFDD0;
-      border: solid #808080;
+      background: #1A1A26;
+      border: solid #FFFFFF;
       text-align: center;
       font-family: system-ui, sans-serif;
       font-size: 1rem;
@@ -435,5 +436,6 @@ html, body{
       font-family: system-ui, sans-serif;
       font-size: 1rem;
       text-align: center;
+      color: #FFFFFF
   }
 }
