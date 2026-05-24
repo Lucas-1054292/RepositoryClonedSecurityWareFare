@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import SearchBar from "./SearchBar.jsx";
 
 function Home() {
   return (
@@ -30,7 +31,7 @@ function Home() {
             </Link>
 
             <div className="search-bar">
-              <input type="text" name="search" placeholder="Zoeken"/>
+              <SearchBar/>
             </div>
         </main>
     </>
