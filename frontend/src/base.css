@@ -306,6 +306,7 @@ html, body{
     text-align: center;
     font-family: system-ui, sans-serif;
     font-size: 1rem;
+    color: #FFFFFF;
 }
 
 .search-bar input::placeholder {
@@ -314,6 +315,17 @@ html, body{
     text-align: center;
     color: #FFFFFF
 }
+
+.search-results{
+    position: fixed;
+    top: 7rem;
+    right: 1.2rem;
+    background: #1A1A26;
+    border-radius: 0.5rem;
+    /*border: solid #FFFFFF; <-- alternative border, left for easy access*/
+    border: none;
+    padding: 0rem 0.5rem;
+  }
 
 /* =========Mobile=========*/
 @media (max-width: 768px) {
@@ -430,6 +442,7 @@ html, body{
       text-align: center;
       font-family: system-ui, sans-serif;
       font-size: 1rem;
+      color: #FFFFFF;
   }
 
   .search-bar input::placeholder {
@@ -437,5 +450,19 @@ html, body{
       font-size: 1rem;
       text-align: center;
       color: #FFFFFF
+  }
+
+  .search-results{
+      position: fixed;
+      bottom: 10rem;
+      top: auto;
+      width: 100%;
+      max-width: 370px;
+      right: 1.3rem;
+      background: #1A1A26;
+      border-radius: 0.5rem;
+      /*border: solid #FFFFFF; <-- alternative border, left for easy access*/
+      border: none;
+      padding: 0rem 0.5rem;
   }
 }
