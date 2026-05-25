@@ -30,7 +30,7 @@ function SavedProjects() {
       {/* Header */}
       <header className="dashboard-header">
         <h1>Opgeslagen Projecten</h1>
-        <p>Hieronder zie je jouw opgeslagen projecten.</p>
+        <p>Hieronder vindt u uw projecten die zijn opgeslagen.</p>
       </header>
 
       <main style={{padding: "1.25rem"}}>
