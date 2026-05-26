@@ -24,7 +24,7 @@ function Projects() {
       })
   }, [])
   const handleShare = (id) => {   //Deze functie wordt aangeroepen als de gebruiker een bepaald project wil delen.
-    const url = `${window.location.origin}/listings/${id}`; // Het bouwt een deelbare URL
+    const url = `${window.location.origin}/projects-details`; // Het bouwt een deelbare URL
     navigator.clipboard.writeText(url).then(() => { //kopieërd de URL naar het klemboord via navigator.clipboard
       setCopiedId(id);                                    //Maakt van copiedId het id van de net opgehaalde URL
       setTimeout(() => setCopiedId(null), 2000); // Reset copiedId na 2 seconden weer terug naar de waarde null, zodat de bevestiging verdwijnt
