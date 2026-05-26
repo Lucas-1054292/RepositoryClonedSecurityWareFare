@@ -153,7 +153,7 @@ html, body{
   padding: 1.75rem;
   border-radius: 0.75rem;
   box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08);
-  color: #000;
+  color: #000000;
 
 }
 
@@ -263,9 +263,9 @@ html, body{
   border-bottom:none;
 }
 
-.projects-table tbody tr:hover {
-    background-color: #808080;
-}
+/*.projects-table tbody tr:hover {*/
+/*    background-color: #808080;*/
+/*}*/
 
 .projects-share-button{
     display: inline-flex;
