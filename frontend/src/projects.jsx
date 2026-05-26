@@ -14,7 +14,7 @@ function Projects() {
 
   const [copiedId, setCopiedId] = useState(null); // Houdt bij welk project uit de lijst gekopieërd is, begint met een waarde van null en wordt ingesteld op het id van de gekopieërde waarde als de gebruiker op de knop drukt
   useEffect(() => {     // Deze functie haalt alle informatie op van de lokale backend en slaat de informatie op met setListings
-    fetch(`${window.location.origin}/projects`)
+    fetch(`http://localhost:8000/listings`)
       .then((response) => response.json())
       .then((data) => {
         setListings(data);
