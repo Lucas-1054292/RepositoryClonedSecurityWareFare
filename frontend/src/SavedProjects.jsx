@@ -34,6 +34,7 @@ function SavedProjects() {
       </header>
 
       <main style={{padding: "1.25rem"}}>
+        <div className="project-wrapper">
         {/* Show message if no projects are saved */}
         {savedProjects.length === 0 ? (
           <p>Geen opgeslagen projecten</p>
@@ -43,22 +44,25 @@ function SavedProjects() {
               <tr>
                 <th>Functie</th>
                 <th>Bedrijf</th>
+                <th>Bekijk</th>
                 <th>Actie</th>
               </tr>
             </thead>
             <tbody>
               {savedProjects.map((project) => (
-                <tr key={project.id}>
-                  <td className="saved-card-text">
+                <tr key={project.id} className= "card projects-card">
+                  <td>
                     <h2>{project.title}</h2>
                   </td>
-                  <td className="saved-card-text">
+                  <td>
                     <p>{project.companyName}</p>
                   </td>
                   <td>
                     {/* Details button*/}
                     <button  onClick={() => handleDetials(project.id)} className="projects-details-button">Details
                     </button>
+                  </td>
+                  <td>
                     {/* Delete button removes project from saved list */}
                     <button
                       onClick={() => handleDelete(project.id)} className="projects-share-button">Verwijderen
@@ -69,6 +73,7 @@ function SavedProjects() {
             </tbody>
           </table>
         )}
+        </div>
       </main>
     </>
   );
