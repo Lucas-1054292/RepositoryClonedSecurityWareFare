@@ -281,7 +281,7 @@ html, body{
     text-decoration: none;
     width: 120px;
     height: 40px;
-    border: none
+    border: none;
 }
 
 .projects-details-button:disabled{
