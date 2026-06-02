@@ -2,12 +2,32 @@ import React, { useState, useEffect } from "react";
 import {Link, useLocation } from "react-router-dom";
 import Apply from "./application.jsx"
 
+function storageAvailable(type) {
+  let storage;
+  try {
+    storage = window[type];
+    const x = "__storage_test__";
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return (
+      e instanceof DOMException &&
+      e.name === "QuotaExceededError" &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      storage &&
+      storage.length !== 0
+    );
+  }
+}
+
 function ProjectDetails() {
   const [listing, setProject] = useState(null);
   const [isSaved, setIsSaved] = useState(false);
 
   const location = useLocation(); // location gives information about the page, later used to get the id from the listing
   const listingId = location.state?.listingId; // if the state exists then it accesses the listingId
+  const [storageError, setStorageError] = useState(false)
 
   useEffect(() => {
     if (!listingId) return; // this is to prevent errors if the user types the route in the browser instead of through /projects and through the details button
@@ -15,9 +35,13 @@ function ProjectDetails() {
     fetch(`http://localhost:8000/listings/${listingId}`)
       .then((response) => response.json())
       .then((data) => {
-        const saved = JSON.parse(localStorage.getItem("savedProjects") || "[]"); // check in localstorage if this project is already saved.
-        const alreadySaved = saved.some((p) => p.id === listingId)
-        setIsSaved(alreadySaved);
+        if (storageAvailable("localStorage")) {
+          const saved = JSON.parse(localStorage.getItem("savedProjects") || "[]"); // check in localstorage if this project is already saved.
+          const alreadySaved = saved.some((p) => p.id === listingId)
+          setIsSaved(alreadySaved);
+        } else {
+          setStorageError(true);
+        }
         setProject(data);
       })
       .catch((error) => {
@@ -29,6 +53,7 @@ function ProjectDetails() {
     if (!listing) return // prevent saving if listing data is not loaded yet
 
     // get the current saved projects list from localstorage
+    if (storageAvailable("localStorage")){
     const saved = JSON.parse(localStorage.getItem("savedProjects") || "[]");
 
     // create a new project object with relevant data
@@ -36,13 +61,16 @@ function ProjectDetails() {
       id: listingId,
       title: listing.title,
       companyName: listing.company?.name
-    }
+    };
 
     // add the new project to the list and save it in localstorage
     const newList =[...saved, NewProject]
     localStorage.setItem("savedProjects", JSON.stringify(newList))
-    setIsSaved(true) // update state so the button changes to "Opgeslagen"
-}
+    setIsSaved(true);// update state so the button changes to "Opgeslagen"
+} else{
+    setStorageError(true);
+    }
+  };
 
   return (
     <>
@@ -55,6 +83,9 @@ function ProjectDetails() {
       {/*main*/}
       <main className="projects-generic">
         <div className="project-wrapper">
+          {storageError && (
+            <p>Opslaan is niet mogelijk in deze browser.</p>
+          )}
           <table className="projects-table">
 
             <thead>
