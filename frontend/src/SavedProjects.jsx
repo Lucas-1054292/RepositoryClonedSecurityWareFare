@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate} from "react-router-dom";
+import {storageAvailable} from "./storageAvailable.jsx"
 
 function SavedProjects() {
   const [savedProjects, setSavedProjects] = useState([]);
   const navigate = useNavigate();
+  const [storageError, setStorageError] = useState(false)
 
   const handleDetials =(id) => {
     navigate("/projects-details", {
@@ -13,16 +15,23 @@ function SavedProjects() {
 
   // Load saved projects from localStorage on mount
   useEffect(() => {
-    const saved = JSON.parse(localStorage.getItem("savedProjects") || "[]"
-    );
-    setSavedProjects(saved);
+    if (storageAvailable("localStorage")) {
+      const saved = JSON.parse(localStorage.getItem("savedProjects") || "[]");
+      setSavedProjects(saved);
+    } else {
+      setStorageError(true); // foutmelding aanzetten
+    }
     }, []);
 
   // Remove project from localStorage and update state
-  const handleDelete = (id) => {const newList = savedProjects.filter((project) => project.id !== id
-    );
-    localStorage.setItem("savedProjects", JSON.stringify(newList));
-    setSavedProjects(newList);
+  const handleDelete = (id) => {
+    if (storageAvailable("localStorage")) {
+      const newList = savedProjects.filter((project) => project.id !== id);
+      localStorage.setItem("savedProjects", JSON.stringify(newList));
+      setSavedProjects(newList);
+    } else {
+      setStorageError(true) // foutmelding aanzetten
+    }
   };
 
   return (
@@ -35,8 +44,10 @@ function SavedProjects() {
 
       <main style={{padding: "1.25rem"}}>
         <div className="project-wrapper">
-        {/* Show message if no projects are saved */}
-        {savedProjects.length === 0 ? (
+          {/* Show message if no projects are saved */}
+          {storageError ? (
+            <p>Foutmelding</p>
+          ): savedProjects.length === 0 ? (
           <p>Geen opgeslagen projecten</p>
         ) : (
           <table className="projects-table">
@@ -59,7 +70,7 @@ function SavedProjects() {
                   </td>
                   <td>
                     {/* Details button*/}
-                    <button  onClick={() => handleDetials(project.id)} className="projects-details-button">Details
+                    <button onClick={() => handleDetials(project.id)} className="projects-details-button">Details
                     </button>
                   </td>
                   <td>
