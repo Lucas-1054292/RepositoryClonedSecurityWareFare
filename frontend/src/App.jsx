@@ -20,7 +20,6 @@ function App() {
             <Route path="/projects" element={<Projects/>} />
             <Route path="/projects-details" element={<ProjectDetails/>} />
             <Route path="/saved-projects" element={<SavedProjects/>} />
-            {/* Hier komen later de andere routes zoals /projects */}
           </Routes>
         </div>
     </BrowserRouter>

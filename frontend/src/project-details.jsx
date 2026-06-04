@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {Link, useLocation } from "react-router-dom";
+import {Link, useLocation, useSearchParams } from "react-router-dom";
 import Apply from "./application.jsx"
 import {storageAvailable} from "./storageAvailable.jsx"
 
@@ -10,6 +10,8 @@ function ProjectDetails() {
   const location = useLocation(); // location gives information about the page, later used to get the id from the listing
   const listingId = location.state?.listingId; // if the state exists then it accesses the listingId
   const [storageError, setStorageError] = useState(false)
+  const [searchParams] = useSearchParams() // if the state exists then it accesses the listingId
+  const listingId = location.state?.listingId || searchParams.get("id"); //Reads from router state, or from a query (shared link)
 
   useEffect(() => {
     if (!listingId) return; // this is to prevent errors if the user types the route in the browser instead of through /projects and through the details button
