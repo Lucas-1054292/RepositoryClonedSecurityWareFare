@@ -23,10 +23,6 @@ function Home() {
             </article>
             </Link>
 
-
-            <div className="search-bar">
-              <SearchBar/>
-            </div>
         </main>
     </>
   )
