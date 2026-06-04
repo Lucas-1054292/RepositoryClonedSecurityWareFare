@@ -1,25 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {Link, useLocation } from "react-router-dom";
 import Apply from "./application.jsx"
-
-function storageAvailable(type) {
-  let storage;
-  try {
-    storage = window[type];
-    const x = "__storage_test__";
-    storage.setItem(x, x);
-    storage.removeItem(x);
-    return true;
-  } catch (e) {
-    return (
-      e instanceof DOMException &&
-      e.name === "QuotaExceededError" &&
-      // acknowledge QuotaExceededError only if there's something already stored
-      storage &&
-      storage.length !== 0
-    );
-  }
-}
+import {storageAvailable} from "./storageAvailable.jsx"
 
 function ProjectDetails() {
   const [listing, setProject] = useState(null);
