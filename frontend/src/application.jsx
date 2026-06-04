@@ -1,23 +1,34 @@
 import {useState, useEffect} from "react";
+import {storageAvailable} from "./storageAvailable.jsx"
 
 function Apply({listingId, email, companyName}) {
   const [alreadyApplied, setAlreadyApplied] = useState(false);
+  const [storageError, setStorageError] = useState(false)
+
 
   //check if user already applied
   useEffect(() =>{
-    const applied = JSON.parse(localStorage.getItem("applied") || "[]");
-    if (applied.includes(listingId)) {
-      setAlreadyApplied(true);
+    if (storageAvailable("localStorage")) {
+      const applied = JSON.parse(localStorage.getItem("applied") || "[]");
+      if (applied.includes(listingId)) {
+        setAlreadyApplied(true);
+      }
+    }else {
+      setStorageError(true)
     }
   }, [listingId]);
 
   // saves the application in localstorage
   function saveApplication(listingId) {
     return new Promise((resolve) =>{
-      const applied = JSON.parse(localStorage.getItem("applied") || "[]");
-      applied.push(listingId);
-      localStorage.setItem("applied", JSON.stringify(applied));
-      resolve("saved");
+      if(storageAvailable("localStorage")) {
+        const applied = JSON.parse(localStorage.getItem("applied") || "[]");
+        applied.push(listingId);
+        localStorage.setItem("applied", JSON.stringify(applied));
+      } else {
+        setStorageError(true);
+      }
+        resolve("saved");
     });
   }
 
@@ -32,6 +43,8 @@ function Apply({listingId, email, companyName}) {
 
   return (
     <div>
+      {/*if there is an error, show this*/}
+      {storageError && <p>Aanmelden is niet mogelijk in deze browser</p>}
       <button
         className="projects-details-button"
         onClick={handleApply} disabled={alreadyApplied}>
