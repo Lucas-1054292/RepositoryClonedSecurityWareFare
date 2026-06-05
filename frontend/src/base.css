@@ -203,7 +203,7 @@ html, body{
     height: 40px;
     justify-content: center;
     border: none;
-    border-width: 0.75rem;
+    border-width: 1rem;
 
 }
 
@@ -220,53 +220,6 @@ html, body{
   grid-template-columns: repeat(3, 1fr);
 }
 
-.projects-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 16px;
-    table-layout: fixed;
-}
-
-.projects-table thead{
-    background: #17181f;
-    color: #FFFFFF;
-    font-weight: bold;
-    padding-bottom: 16px;
-}
-
-.projects-table thead tr th:first-child{
-  border-radius: 1rem 0 0 ;
-}
-
-.projects-table thead tr th:last-child{
-  border-radius: 0 1rem 0 ;
-}
-
-
-
-.projects-table th,
-.projects-table td {
-    padding: 10px 20px;
-    text-align: center;
-}
-
-.projects-table td {
-    border-top: 2px solid #e0e0e0;
-}
-.projects-table tbody tr:last-child td:first-child{
-  border-radius: 0 0 0 1rem;
-  border-bottom:none;
-}
-
-.projects-table tbody tr:last-child td:last-child{
-  border-radius: 0 0 1rem 0;
-  border-bottom:none;
-}
-
-/*.projects-table tbody tr:hover {*/
-/*    background-color: #808080;*/
-/*}*/
-
 .projects-share-button{
     display: inline-flex;
     align-items: center;
@@ -281,7 +234,7 @@ html, body{
     text-decoration: none;
     width: 120px;
     height: 40px;
-    border: none;
+    border: 0.75rem;
 }
 
 .projects-details-button:disabled{
@@ -465,4 +418,13 @@ html, body{
       border: none;
       padding: 0rem 0.5rem;
   }
+}
+.card-header{
+  font-size: 1rem;
+  font-weight: bold;
+}
+.card-actions{
+  text-align: right;
+  gap: 2rem;
+  border-radius: 0.5rem;
 }

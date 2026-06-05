@@ -22,11 +22,6 @@ function Home() {
                 <h2>Opgeslagen</h2>
             </article>
             </Link>
-
-
-            <div className="search-bar">
-              <SearchBar/>
-            </div>
         </main>
     </>
   )

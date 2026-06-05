@@ -61,7 +61,7 @@ function ProjectDetails() {
       {/*header*/}
         <header className="dashboard-header">
          <h1>Project details</h1>
-         <p>Hieronder vindt u de details bij uw aangeklikte project.</p>
+         <p>Hieronder vindt je de details bij uw aangeklikte project.</p>
         </header>
 
       {/*main*/}
