@@ -58,6 +58,7 @@ function Projects() {
                   >
                     Details
                   </button>
+                  {"                                       "}
                   <button
                     className="projects-share-button"
                     onClick={() => handleShare(listing.id)}
