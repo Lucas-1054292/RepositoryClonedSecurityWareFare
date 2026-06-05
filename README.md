@@ -16,7 +16,6 @@ Vervolgens kan de student zelf de tekst van de e-mail opzetten en de mail verstu
 
 Dit alles is zo verwerkt dat het voor de gebruiker toegankelijk is en fijn in gebruik. Ook hebben we de WCAG-richtlijnen opgevolgd zodat het gebruiksvriendelijk is voor gebruikers.
 
-
 -Team notes: 
 Als eerst moeten deze commands geinstalleerd worden:
 1. npm install
