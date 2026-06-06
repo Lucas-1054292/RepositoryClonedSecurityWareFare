@@ -1,10 +1,10 @@
 # Werkplaats 4 - Progressive Web Apps
-Gemaakt door:
--Donovan Feller (1073598)
--Lucas Reedijk (1054292)
--Taha Ditta (1088007)
+Gemaakt door:<br>
+-Donovan Feller (1073598)<br>
+-Lucas Reedijk (1054292)<br>
+-Taha Ditta (1088007)<br>
 
-**beschrijving:**
+**beschrijving:**<br>
 Wij als groep Hyena's, hebben een PWA (Progessive Web Application) gebouwd waar studenten afstudeerprojecten kunnen zien.
 In deze application kun je een lijst van afstudeerprojecten, de functie, de naam van het bedrijf, een details knop en een share knop.
 Als de student op de details knop klikt, dan wordt hij verwezen naar een detail pagina met meer informatie over het afstudeerproject zoals: 
@@ -16,20 +16,20 @@ Vervolgens kan de student zelf de tekst van de e-mail opzetten en de mail verstu
 
 Dit alles is zo verwerkt dat het voor de gebruiker toegankelijk is en fijn in gebruik. Ook hebben we de WCAG-richtlijnen opgevolgd zodat het gebruiksvriendelijk is voor gebruikers.
 
-**Instructies voor installatie:**
+**Instructies voor installatie:**<br>
 In stappen hieronder zal ik beschrijven hoe u onze bestanden kunt installeren:
 1. Download onze zip file
 2. Haal de folder uit die zipfile (het is de bedoeling dat je 1 folder hebt waarin alle bestanden en overige folders behorend bij het project staan, als u dit heeft dan is dat voldaan)
 3. Open de folder met een door u gekozen IDE (bijvoorbeeld PyCharm of Visual Studio Code)
 4. Installeer de benodigdheden het bestand genaamd "requirements.txt" (zie command hieronder)
 
-**Instructies voor het opstarten:**
+**Instructies voor het opstarten:**<br>
 Hier zal ik beschrijven hoe u onze web-applicatie opstart nadat u de bestanden in een IDE open hebt staan:
 
-Voor het opstarten van dit project moet u eerst een open source platform genaamd Node downloaden, met Node kunnen developers webservers of web apps maken.
-Dit kunt u via de volgende link downloaden: 
-https://nodejs.org/en/download 
-Ook moet u de docker desktop app gedownload hebben. Deze kunt u via de volgende link downloaden: 
+Voor het opstarten van dit project moet u eerst een open source platform genaamd Node downloaden, met Node kunnen developers webservers of web apps maken.<br>
+Dit kunt u via de volgende link downloaden: <br>
+https://nodejs.org/en/download <br>
+Ook moet u de docker desktop app gedownload hebben. Deze kunt u via de volgende link downloaden: <br>
 https://docs.docker.com/desktop/setup/install/windows-install/
 
 
@@ -38,7 +38,7 @@ Als eerst moeten deze commands geinstalleerd worden:
 1. npm install
 2. npm install react-router-dom
 
-**Screenshots**
+**Screenshots**<br>
 - Homescreen: 
 ![Schermafbeelding 2026-06-06 182704.png](docs/Screenshots/Schermafbeelding%202026-06-06%20182704.png)
 - Lijst van projecten: 
@@ -49,7 +49,7 @@ Als eerst moeten deze commands geinstalleerd worden:
 
 **Andere dingen die je wilt melden of belangrijk zijn**
 
-**Links naar relevante pull requests:** 
+**Links naar relevante pull requests:** <br>
 - relevante Pull Requests Donovan Feller:
 
 - relevante Pull Requests Taha Ditta: 
@@ -57,7 +57,7 @@ Als eerst moeten deze commands geinstalleerd worden:
 - relevante Pull Requests Lucas Reedijk:
 https://github.com/Rac-Software-Development/wp4-2026-pwa-1c2-hyena/pull/24/changes 
 
-**Apa Bronnen**
+**Apa Bronnen**<br>
 - Bronnenlijst Donovan Feller:
 
 - Bronnenlijst Taha Ditta: 
