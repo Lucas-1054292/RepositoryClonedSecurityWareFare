@@ -1,6 +1,5 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import SearchBar from "./SearchBar.jsx";
 
 function Home() {
   return (
@@ -24,15 +23,6 @@ function Home() {
             </article>
             </Link>
 
-           <Link to="/..." className="card-link">
-            <article className="card card-3">
-              <h2>...</h2>
-            </article>
-            </Link>
-
-            <div className="search-bar">
-              <SearchBar/>
-            </div>
         </main>
     </>
   )
