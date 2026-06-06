@@ -45,7 +45,7 @@ Als eerst moeten deze commands geinstalleerd worden:
 ![Schermafbeelding 2026-06-06 182901.png](docs/Screenshots/Schermafbeelding%202026-06-06%20182901.png)
 - Project details: 
 
-- Opgeslagen detials: 
+- Opgeslagen projecten: 
 
 **Andere dingen die je wilt melden of belangrijk zijn**
 
