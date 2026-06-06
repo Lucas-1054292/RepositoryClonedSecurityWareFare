@@ -39,6 +39,13 @@ Als eerst moeten deze commands geinstalleerd worden:
 2. npm install react-router-dom
 
 **Screenshots**
+- Homescreen: 
+![img_2.png](img_2.png)
+- Lijst van projecten: 
+![img_3.png](img_3.png)
+- Project details: 
+
+- Opgeslagen detials: 
 
 **Andere dingen die je wilt melden of belangrijk zijn**
 
