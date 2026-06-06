@@ -16,21 +16,41 @@ Vervolgens kan de student zelf de tekst van de e-mail opzetten en de mail verstu
 
 Dit alles is zo verwerkt dat het voor de gebruiker toegankelijk is en fijn in gebruik. Ook hebben we de WCAG-richtlijnen opgevolgd zodat het gebruiksvriendelijk is voor gebruikers.
 
+**Instructies voor installatie:**
+In stappen hieronder zal ik beschrijven hoe u onze bestanden kunt installeren:
+1. Download onze zip file
+2. Haal de folder uit die zipfile (het is de bedoeling dat je 1 folder hebt waarin alle bestanden en overige folders behorend bij het project staan, als u dit heeft dan is dat voldaan)
+3. Open de folder met een door u gekozen IDE (bijvoorbeeld PyCharm of Visual Studio Code)
+4. Installeer de benodigdheden het bestand genaamd "requirements.txt" (zie command hieronder)
+
+**Instructies voor het opstarten:**
+Hier zal ik beschrijven hoe u onze web-applicatie opstart nadat u de bestanden in een IDE open hebt staan:
+
+Voor het opstarten van dit project moet u eerst een open source platform genaamd Node downloaden, met Node kunnen developers webservers of web apps maken.
+Dit kunt u via de volgende link downloaden: 
+https://nodejs.org/en/download 
+Ook moet u de docker desktop app gedownload hebben. Deze kunt u via de volgende link downloaden: 
+https://docs.docker.com/desktop/setup/install/windows-install/
+
+
 -Team notes: 
 Als eerst moeten deze commands geinstalleerd worden:
 1. npm install
 2. npm install react-router-dom
 
-> [!NOTE]
-> Bij inleveren moet hier het volgende staan:
-> 
-> Instructies voor installatie en opstarten
-> Screenshots
-> Andere dingen die je wilt melden of belangrijk zijn (bonus functionaliteiten bijvoorbeeld)
-> Links naar relevante pull requests (voor elk groepslid)
-> Link naar een filmpje
-> APA bronnen
+**Screenshots**
 
+**Andere dingen die je wilt melden of belangrijk zijn**
+
+**Links naar relevante pull requests:** 
+- relevante Pull Requests Donovan Feller:
+
+- relevante Pull Requests Taha Ditta: 
+
+- relevante Pull Requests Lucas Reedijk:
+https://github.com/Rac-Software-Development/wp4-2026-pwa-1c2-hyena/pull/24/changes 
+
+**Apa Bronnen**
 
 ## Casus
 
