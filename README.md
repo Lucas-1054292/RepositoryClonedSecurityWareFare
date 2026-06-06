@@ -51,6 +51,12 @@ Als eerst moeten deze commands geinstalleerd worden:
 https://github.com/Rac-Software-Development/wp4-2026-pwa-1c2-hyena/pull/24/changes 
 
 **Apa Bronnen**
+- Bronnenlijst Donovan Feller:
+
+- Bronnenlijst Taha Ditta: 
+
+- Bronnenlijst Lucas Reedijk: 
+[Bronnenlijst Lucas Reedijk.docx](docs/Bronnen/Bronnenlijst%20Lucas%20Reedijk.docx)
 
 ## Casus
 
