@@ -101,7 +101,7 @@ function ProjectDetails() {
 
                   <td>
                     <Apply
-                      listingId={listingId} email={listing.contact.email} companyName={listing.company.name}/>
+                      listingId={listingId} jobTitle={listing.title} email={listing.contact.email} companyName={listing.company.name}/>
                   </td>
 
                   {/*Save button, disabled when project is already saved*/}
