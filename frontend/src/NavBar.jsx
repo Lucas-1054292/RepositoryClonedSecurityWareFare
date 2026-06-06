@@ -16,7 +16,7 @@ function NavBar({isExpanded, setIsExpanded}) {
       <aside className= "dashboard-sidebar">
 
         <div className="logo">
-          <img src={logoImg} alt="logo"/>
+          <img src={logoImg} alt=""/>
           </div>
         <button type="button" id="resize" onClick={toggleSidebar}>
           &#9776;
@@ -25,22 +25,22 @@ function NavBar({isExpanded, setIsExpanded}) {
         <nav className="sidebar_navigation">
       <ul>
         <li>
-          <Link to= "/" className='nav-item'>
-            <img src={homeImg} alt="home"/>
+          <Link to= "/" className='nav-item' aria-label="Home">
+            <img src={homeImg} alt=""/>
             <span className="title">Home</span>
             </Link>
         </li>
 
         <li>
-          <Link to= "/projects" className='nav-item'>
-            <img src={projectsImg} alt="projects"/>
+          <Link to= "/projects" className='nav-item' aria-label="Projecten">
+            <img src={projectsImg} alt=""/>
             <span className="title">Projecten</span>
             </Link>
         </li>
 
         <li>
-          <Link to= "/saved-projects" className='nav-item' >
-            <img src={informationImg} alt="saved-projects"/>
+          <Link to= "/saved-projects" className='nav-item' aria-label="Opgeslagen">
+            <img src={informationImg} alt=""/>
             <span className="title">Opgeslagen</span>
             </Link>
         </li>
