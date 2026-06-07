@@ -9,8 +9,9 @@ function Apply({listingId, jobTitle, email, companyName}) {
   //check if user already applied
   useEffect(() =>{
     if (storageAvailable("localStorage")) {
-      const applied = JSON.parse(localStorage.getItem("applied") || "[]");
-      if (applied.includes(listingId)) {
+      const saved = JSON.parse(localStorage.getItem("savedProjects") || "[]");
+      const project = saved.find((p) => p.id === listingId); //check if this project already exists
+        if (project?.applied){ //if it exists and applied is true disable the button
         setAlreadyApplied(true);
       }
     }else {
@@ -22,9 +23,17 @@ function Apply({listingId, jobTitle, email, companyName}) {
   function saveApplication(listingId) {
     return new Promise((resolve) =>{
       if(storageAvailable("localStorage")) {
-        const applied = JSON.parse(localStorage.getItem("applied") || "[]");
-        applied.push(listingId);
-        localStorage.setItem("applied", JSON.stringify(applied));
+        const saved = JSON.parse(localStorage.getItem("savedProjects") || "[]");
+        const exists = saved.find((p) => p.id === listingId); // check if the project already exists
+
+        if (exists) { // project already saved, set applied to true
+        const updated = saved.map((p)=> p.id === listingId ? {...p, applied: true} : p);
+        localStorage.setItem("savedProjects", JSON.stringify(updated));
+      } else {
+          //project not yet saved,add it with true
+          saved.push({id: listingId, title: jobTitle, companyName, applied: true});
+          localStorage.setItem("savedProjects", JSON.stringify(saved));
+        }
       } else {
         setStorageError(true);
       }

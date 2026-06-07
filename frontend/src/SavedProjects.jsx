@@ -7,7 +7,7 @@ function SavedProjects() {
   const navigate = useNavigate();
   const [storageError, setStorageError] = useState(false)
 
-  const handleDetials =(id) => {
+  const handleDetails =(id) => {
     navigate("/projects-details", {
       state: {listingId: id},
     });
@@ -55,6 +55,7 @@ function SavedProjects() {
               <tr>
                 <th>Functie</th>
                 <th>Bedrijf</th>
+                <th>Gesoliciteerd</th>
                 <th>Bekijk</th>
                 <th>Actie</th>
               </tr>
@@ -69,8 +70,11 @@ function SavedProjects() {
                     <p>{project.companyName}</p>
                   </td>
                   <td>
+                    {project.applied ? "Aangemeld" : "Niet aangemeld"}
+                  </td>
+                  <td>
                     {/* Details button*/}
-                    <button onClick={() => handleDetials(project.id)} className="projects-details-button">Details
+                    <button onClick={() => handleDetails(project.id)} className="projects-details-button">Details
                     </button>
                   </td>
                   <td>
