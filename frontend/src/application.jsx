@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 import {storageAvailable} from "./storageAvailable.jsx"
 
-function Apply({listingId, email, companyName}) {
+function Apply({listingId, jobTitle, email, companyName}) {
   const [alreadyApplied, setAlreadyApplied] = useState(false);
   const [storageError, setStorageError] = useState(false)
 
@@ -33,7 +33,7 @@ function Apply({listingId, email, companyName}) {
   }
 
   async function handleApply() {
-    const subject = "Sollicitatie afstudeerproject - " + companyName;
+    const subject = `Sollicitatie ${jobTitle} - ` + companyName;
     window.location.href = "mailto:" + email + "?subject=" + encodeURIComponent(subject);
 
     // wait until the application is saved
