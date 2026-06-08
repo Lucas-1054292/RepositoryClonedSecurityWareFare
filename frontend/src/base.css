@@ -182,9 +182,9 @@ html, body{
   background-image:
     linear-gradient(62deg, #c399f8 0%, #3e1496 100%);
     margin-bottom: 20px;
-  width: 850px;
-  height: 175px;
-  padding: 1.5rem;
+    width: 850px;
+    height: 175px;
+    padding: 1.5rem;
 }
 
 .projects-wrapper{
@@ -350,10 +350,12 @@ html, body{
     color: #000000;
   }
 }
+
 .card-header{
   font-size: 25px;
   font-weight: bold;
 }
+
 .card-actions {
   text-align: right;
 }

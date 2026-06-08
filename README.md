@@ -4,7 +4,7 @@ Gemaakt door:<br>
 -Lucas Reedijk (1054292)<br>
 -Taha Ditta (1088007)<br>
 
-**beschrijving:**<br>
+**Beschrijving:**<br>
 Wij als groep Hyena's, hebben een PWA (Progessive Web Application) gebouwd waar studenten afstudeerprojecten kunnen zien.
 In deze application kun je een lijst van afstudeerprojecten, de functie, de naam van het bedrijf, een details knop en een share knop.
 Als de student op de details knop klikt, dan wordt hij verwezen naar een detail pagina met meer informatie over het afstudeerproject zoals: 
@@ -40,14 +40,17 @@ Als eerst moeten deze commands geinstalleerd worden:
 
 **Screenshots**<br>
 - Homescreen: 
-![Schermafbeelding 2026-06-06 182704.png](docs/Screenshots/Schermafbeelding%202026-06-06%20182704.png)
+![Schermafbeelding Homescreen.png](docs/Screenshots/Schermafbeelding%20Homescreen.png)
 - Lijst van projecten: 
-![Schermafbeelding 2026-06-06 182901.png](docs/Screenshots/Schermafbeelding%202026-06-06%20182901.png)
-- Project details: 
-
+![Schermafbeelding Projecten.png](docs/Screenshots/Schermafbeelding%20Projecten.png)
+- Project details:
+![Schermafbeelding ProjectDetails.png](docs/Screenshots/Schermafbeelding%20ProjectDetails.png)
 - Opgeslagen projecten: 
+![Schermafbeelding opgeslagenprojecten.png](docs/Screenshots/Schermafbeelding%20opgeslagenprojecten.png)<br>
 
 **Andere dingen die je wilt melden of belangrijk zijn**
+Dit is bij ons project niet van toepassing
+
 
 **Links naar relevante pull requests:** <br>
 - relevante Pull Requests Donovan Feller:
