@@ -1,20 +1,20 @@
 # Werkplaats 4 - Progressive Web Apps
-Gemaakt door:<br>
+__Gemaakt door:<br>__
 -Donovan Feller (1073598)<br>
 -Lucas Reedijk (1054292)<br>
 -Taha Ditta (1088007)<br>
 
 **Beschrijving:**<br>
-Wij als groep Hyena's, hebben een PWA (Progessive Web Application) gebouwd waar studenten afstudeerprojecten kunnen zien.
-In deze application kun je een lijst van afstudeerprojecten, de functie, de naam van het bedrijf, een details knop en een share knop.
+Wij als groep 1C2 Hyena's, hebben een PWA (Progessive Web Application) gebouwd genaamd RACademic hierin kunnen studenten alle beschikbare afstudeerprojecten kunnen zien.
+In deze applicatie kun je een overzicht van afstudeerprojecten, de functie, de naam van het bedrijf zien. Ook is er een details knop waarmee je extra informatie kan inzien bij een specifiek project daarnaast is er ook een share knop waarmee je een project kann delen met anderen.
 Als de student op de details knop klikt, dan wordt hij verwezen naar een detail pagina met meer informatie over het afstudeerproject zoals: 
 opnieuw de functie, een korte beschrijving, de start datum, de contact persoon, het e-mail adres, een knop om te solliciteren bij dit bedrijf
 en een knop om dit project op jouw apparaat op te slaan. 
-De studenten kunnen projecten op slaan en dan komt het project op een lijst genaamd "opgeslagen projecten" te staan. Als de student op "solliciteren" klikt,
-dan wordt de student doorgewezen naar een mail programma (bijvoorbeeld outlook) en wordt er een e-mail met het ingevulde e-mail adres van het bedrijf klaargezet. 
+De studenten kunnen projecten opslaan en kunnen deze projecten terugvinden op een overzicht genaamd "Opgeslagen projecten". Als de student op "Solliciteren" klikt,
+dan wordt de student doorverwezen naar een mail programma (bijvoorbeeld outlook) en wordt er een mail venster met het ingevulde e-mail adres van het bedrijf, de gekozen functie in het onderwerp klaargezet. 
 Vervolgens kan de student zelf de tekst van de e-mail opzetten en de mail versturen. 
 
-Dit alles is zo verwerkt dat het voor de gebruiker toegankelijk is en fijn in gebruik. Ook hebben we de WCAG-richtlijnen opgevolgd zodat het gebruiksvriendelijk is voor gebruikers.
+Dit alles is zo verwerkt dat het voor de gebruiker toegankelijk is en fijn in gebruik. Ook hebben we de WCAG-richtlijnen opgevolgd voor optimale gebruiksvriendelijk voor gebruikers.
 
 **Instructies voor installatie:**<br>
 In stappen hieronder zal ik beschrijven hoe u onze bestanden kunt installeren:
@@ -22,43 +22,125 @@ In stappen hieronder zal ik beschrijven hoe u onze bestanden kunt installeren:
 2. Haal de folder uit die zipfile (het is de bedoeling dat je 1 folder hebt waarin alle bestanden en overige folders behorend bij het project staan, als u dit heeft dan is dat voldaan)
 3. Open de folder met een door u gekozen IDE (bijvoorbeeld PyCharm of Visual Studio Code)
 4. Installeer de benodigdheden het bestand genaamd "requirements.txt" (zie command hieronder)
+<br>
+<br>
+- **macOS gebruikers:** op macOS kan het zijn dat de onderstaande commands niet werken, gebruik dan pip3 in plaats van pip & python3 in plaats van python bij de commands. 
+<br>
+````
+```
+pip install -r requirements.txt
+```
+````
 
-**Instructies voor het opstarten:**<br>
-Hier zal ik beschrijven hoe u onze web-applicatie opstart nadat u de bestanden in een IDE open hebt staan:
-
-Voor het opstarten van dit project moet u eerst een open source platform genaamd Node downloaden, met Node kunnen developers webservers of web apps maken.<br>
+__Vervolgens hebt u NodeJS nodig.__  
 Dit kunt u via de volgende link downloaden: <br>
 https://nodejs.org/en/download <br>
-Ook moet u de docker desktop app gedownload hebben. Deze kunt u via de volgende link downloaden: <br>
-https://docs.docker.com/desktop/setup/install/windows-install/
+
+1. Zorg dat u LTS kiest.  <br>
+![LTS.png](docs/Screenshots/LTS.png)
+<br>
+<br>
+2. Voor **Windows** download .msi en voor **macOS** download .pkg. <br>
+![Windows_NodeJS.png](docs/Screenshots/Windows_NodeJS.png)
+<br>
+<br>
+![macOS_NodeJS.png](docs/Screenshots/macOS_NodeJS.png)
+<br>
+<br>
+3. Als de installatie klaar is, open terminal en voer de onderstaande command uit. 
+````
+```
+node -v
+```
+````
+<br>
+4. Zie je een versienummer, dan is het gelukt.
+<br>
+
+5. Run daarna in het project de benodigde pakketen: npm install en npm install react-router-dom. Nu kun je npm run dev gebruiken 
+<br>
+__Als eerst de onderstaande:__
+````
+```
+npm install
+```
+````
 
 
--Team notes: 
-Als eerst moeten deze commands geinstalleerd worden:
-1. npm install
-2. npm install react-router-dom
+__Vervolgens de tweede:__
+````
+```
+npm install react-router-dom
+```
+````
+<br>
+
+6. Ook moet u de docker desktop app gedownload & geïnstalleerd hebben. Deze kunt u via de volgende link downloaden: <br>
+Windows: https://docs.docker.com/desktop/setup/install/windows-install/
+<br>macOS: https://docs.docker.com/desktop/setup/install/mac-install/
+<br>
+<br>
+7. Voor de installatie zie de folder genaamd: __"Handleidingen"__ in de docs folder.
+<br>
+<br>
+8. Als je dit allemaal gedaan hebt ben je klaar met de installatie (zie opstart instructies om het project op te kunnen starten)
+
+__BELANGRIJK:__
+Als er iets mis is gegaan of de installatie is mislukt, begin dan opnieuw vanaf stap 1.
+<br>
+
+**Instructies voor het opstarten:**<br>
+Hieronder zal ik beschrijven hoe u onze web-applicatie opstart nadat u de bestanden in een IDE open hebt staan (en de installatie instructies hebt opgevolgd):
+
+- run het onderstaande command in je terminal:
+
+**LET OP:** Zorg ervoor dat je voor het runnen van de onderstaande command Docker hebt opgestart en (vaak linksonderin) "Engine running" ziet staan, zodra je dit ziet kan je de onderstaande command uitvoeren.
+
+````
+```
+npm run dev
+```
+````
+
+<br>
+__Downloaden van onze applicatie:__
+
+Chrome --> bij het "Meer (3 puntjes) menu" casten, opslaan en delen --> Pagina installeren als app <br>
+Brave --> bij het "Meer (3 streepjes) menu" --> save and share --> Pagina installeren als app <br>
+<br>
 
 **Screenshots**<br>
-- Homescreen: 
-![Schermafbeelding Homescreen.png](docs/Screenshots/Schermafbeelding%20Homescreen.png)
-- Lijst van projecten: 
-![Schermafbeelding Projecten.png](docs/Screenshots/Schermafbeelding%20Projecten.png)
-- Project details:
-![Schermafbeelding ProjectDetails.png](docs/Screenshots/Schermafbeelding%20ProjectDetails.png)
-- Opgeslagen projecten: 
-![Schermafbeelding opgeslagenprojecten.png](docs/Screenshots/Schermafbeelding%20opgeslagenprojecten.png)<br>
+- __Homescreen:__ <br>
+![Startscherm.png](docs/Screenshots/Startscherm.png)
+<br>
+<br>
+
+- __Lijst van projecten:__ <br>
+![Projecten.png](docs/Screenshots/Projecten.png)
+<br>
+<br>
+
+- __Project details:__ <br>
+![ProjectDetails.png](docs/Screenshots/ProjectDetails.png)
+<br>
+<br>
+
+- __Opgeslagen projecten:__ <br>
+![OpgeslagenProjecten.png](docs/Screenshots/OpgeslagenProjecten.png)
+<br>
+<br>
 
 **Video**<br>
 https://github.com/user-attachments/assets/6c458c36-2465-4150-8450-11e8e062a6e0
 
 
 
-**Andere dingen die je wilt melden of belangrijk zijn**
+**Andere dingen die je wilt melden of belangrijk zijn**: <br>
 Dit is bij ons project niet van toepassing
 
 
-**Links naar relevante pull requests:** <br>
-- relevante Pull Requests Donovan Feller (Async programmeren):
+**Links naar relevante pull requests (Async programmeren):** <br>
+- relevante Pull Requests Donovan Feller:
 https://github.com/Rac-Software-Development/wp4-2026-pwa-1c2-hyena/pull/10/changes
 
 - relevante Pull Requests Taha Ditta: 
@@ -75,38 +157,3 @@ https://github.com/Rac-Software-Development/wp4-2026-pwa-1c2-hyena/pull/24/chang
 - Bronnenlijst Lucas Reedijk: 
 [Bronnenlijst Lucas Reedijk.docx](docs/Bronnen/Bronnenlijst%20Lucas%20Reedijk.docx)
 
-## Casus
-
-Zie de [CASUS.md](./CASUS.md) voor de casus van deze werkplaats.
-
-## Projectstructuur
-
-### `/api`: 
-  
-FastAPI-gebaseerde backend waar jullie je applicatie op baseren. Dient te draaien in Docker, zie [`docker-compose.yml`](./docker-compose.yml) hoe dit in zijn werk gaat.
-
-### `/data`:
-
-De map die gedeeld wordt met de API in Docker. Hier wordt de SQLite database in aangemaakt.
-
-### `/docs`:
-
-De map voor documentatie. De map `prompt-log` is bedoeld voor (automatische) verslaglegging bij gebruik van GenAI in de IDE.
-
-## Installeren
-
-Zorg dat je docker geinstalleerd hebt.
-
-## Opstarten
-
-Start de backend door `docker compose up --build` te draaien.
-
-## Generative AI
-
-In deze repository proberen we het gebruik van generatieve AI en de verslaglegging eromheen wat te stroomlijnen. In IDEs zoals VSCode worden deze bestanden automatisch uitgelezen en meegestuurd met vragen die je Copilot stelt. We vragen het Large Language Model (LLM) daarbij je te helpen met de problemen en oplossingen te begrijpen, maar ze niet voor je in te vullen. Daarnaast vragen we het LLM om de conversaties te loggen. Zoals hierboven beschreven is hier de map `prompt-log` voor aangemaakt.
-
-
-Downloaden & Testen:
-
-PWA Download via de browser (Brave) bij het "Meer (3 streepjes) menu" --> save and share --> Pagina installeren als app
-                        Chrome bij het "Meer (3 puntjes) menu" casten, opslaan en delen --> Pagina installeren als app
