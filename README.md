@@ -4,7 +4,7 @@ Gemaakt door:<br>
 -Lucas Reedijk (1054292)<br>
 -Taha Ditta (1088007)<br>
 
-**beschrijving:**<br>
+**Beschrijving:**<br>
 Wij als groep Hyena's, hebben een PWA (Progessive Web Application) gebouwd waar studenten afstudeerprojecten kunnen zien.
 In deze application kun je een lijst van afstudeerprojecten, de functie, de naam van het bedrijf, een details knop en een share knop.
 Als de student op de details knop klikt, dan wordt hij verwezen naar een detail pagina met meer informatie over het afstudeerproject zoals: 
@@ -50,7 +50,8 @@ Als eerst moeten deze commands geinstalleerd worden:
 **Andere dingen die je wilt melden of belangrijk zijn**
 
 **Links naar relevante pull requests:** <br>
-- relevante Pull Requests Donovan Feller:
+- relevante Pull Requests Donovan Feller (Async programmeren):
+https://github.com/Rac-Software-Development/wp4-2026-pwa-1c2-hyena/pull/10/changes
 
 - relevante Pull Requests Taha Ditta: 
 
@@ -59,7 +60,7 @@ https://github.com/Rac-Software-Development/wp4-2026-pwa-1c2-hyena/pull/24/chang
 
 **Apa Bronnen**<br>
 - Bronnenlijst Donovan Feller:
-
+[Bronvermelding_Donovan_Feller_1073598_WP4.pdf](docs/Bronnen/Bronvermelding_Donovan_Feller_1073598_WP4.pdf)
 - Bronnenlijst Taha Ditta: 
 
 - Bronnenlijst Lucas Reedijk: 
