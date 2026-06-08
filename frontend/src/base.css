@@ -395,3 +395,51 @@ html, body{
     color: #000000;
   }
 }
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+    table-layout: fixed;
+    font-weight: bold;
+}
+
+.projects-table thead{
+    background: #17181f;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding-bottom: 16px;
+}
+
+.projects-table thead tr th:first-child{
+  border-radius: 1rem 0 0 ;
+}
+
+.projects-table thead tr th:last-child{
+  border-radius: 0 1rem 0 ;
+}
+
+
+
+.projects-table th,
+.projects-table td {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.projects-table td {
+    border-top: 2px solid #e0e0e0;
+}
+.projects-table tbody tr:last-child td:first-child{
+  border-radius: 0 0 0 1rem;
+  border-bottom:none;
+}
+
+.projects-table tbody tr:last-child td:last-child{
+  border-radius: 0 0 1rem 0;
+  border-bottom:none;
+}
+
+/*.projects-table tbody tr:hover {*/
+/*    background-color: #808080;*/
+/*}*/
+
