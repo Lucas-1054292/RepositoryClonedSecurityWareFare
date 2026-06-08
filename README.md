@@ -53,7 +53,8 @@ Dit is bij ons project niet van toepassing
 
 
 **Links naar relevante pull requests:** <br>
-- relevante Pull Requests Donovan Feller:
+- relevante Pull Requests Donovan Feller (Async programmeren):
+https://github.com/Rac-Software-Development/wp4-2026-pwa-1c2-hyena/pull/10/changes
 
 - relevante Pull Requests Taha Ditta: 
 
@@ -62,7 +63,7 @@ https://github.com/Rac-Software-Development/wp4-2026-pwa-1c2-hyena/pull/24/chang
 
 **Apa Bronnen**<br>
 - Bronnenlijst Donovan Feller:
-
+[Bronvermelding_Donovan_Feller_1073598_WP4.pdf](docs/Bronnen/Bronvermelding_Donovan_Feller_1073598_WP4.pdf)
 - Bronnenlijst Taha Ditta: 
 
 - Bronnenlijst Lucas Reedijk: 
