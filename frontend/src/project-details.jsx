@@ -61,7 +61,7 @@ function ProjectDetails() {
       {/*header*/}
         <header className="dashboard-header">
          <h1>Project details</h1>
-         <p>Hieronder vindt u de details bij uw aangeklikte project.</p>
+         <p>Hieronder vindt je de details bij uw aangeklikte project.</p>
         </header>
 
       {/*main*/}
@@ -100,7 +100,7 @@ function ProjectDetails() {
                   <td>{listing.contact.email}</td>
                   <td>
                     <Apply
-                      listingId={listingId} email={listing.contact.email} companyName={listing.company.name}/>
+                      listingId={listingId} jobTitle={listing.title} email={listing.contact.email} companyName={listing.company.name}/>
                   </td>
 
                   {/*Save button, disabled when project is already saved*/}
