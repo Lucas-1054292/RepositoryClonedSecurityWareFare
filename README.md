@@ -108,6 +108,16 @@ __Downloaden van onze applicatie:__
 Chrome --> bij het "Meer (3 puntjes) menu" casten, opslaan en delen --> Pagina installeren als app <br>
 Brave --> bij het "Meer (3 streepjes) menu" --> save and share --> Pagina installeren als app <br>
 <br>
+<br>
+__Bij offline gebruik:__
+Mocht u na het refreshen van de pagina tijdens offline gebruik een wit scherm zien/krijgen.
+<br>
+- Windows: klik dan op F5 
+<br>
+- Command + R
+
+<br>
+Hierna zal de app weer probleemloos offline verder werken.
 
 **Screenshots**<br>
 - __Homescreen:__ <br>
