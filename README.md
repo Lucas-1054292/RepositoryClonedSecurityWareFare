@@ -40,9 +40,9 @@ Als eerst moeten deze commands geinstalleerd worden:
 
 **Screenshots**<br>
 - Homescreen: 
-![Schermafbeelding 2026-06-06 182704.png](docs/Screenshots/Schermafbeelding%Homescreen.png)
+!![Schermafbeelding Homescreen.png](docs/Afbeeldingen/Schermafbeelding%20Homescreen.png)
 - Lijst van projecten: 
-![Schermafbeelding 2026-06-06 182901.png](docs/Screenshots/Schermafbeelding%projectenpage.png)
+![Schermafbeelding projectenpage.png](docs/Afbeeldingen/Schermafbeelding%20projectenpage.png)
 - Project details: 
 
 - Opgeslagen projecten: 
