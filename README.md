@@ -16,6 +16,10 @@ Vervolgens kan de student zelf de tekst van de e-mail opzetten en de mail verstu
 
 Dit alles is zo verwerkt dat het voor de gebruiker toegankelijk is en fijn in gebruik. Ook hebben we de WCAG-richtlijnen opgevolgd voor optimale gebruiksvriendelijk voor gebruikers.
 
+__Notitie:__
+Het is mogelijk dat spacing of bepaalde images niet zichtbaar zijn in de README.md van GitHub zelf, wees niet getreurd! Je kan dit oplossen door de README.md te openen in je IDE ;)
+
+
 **Instructies voor installatie:**<br>
 In stappen hieronder zal ik beschrijven hoe u onze bestanden kunt installeren:
 1. Download onze zip file
