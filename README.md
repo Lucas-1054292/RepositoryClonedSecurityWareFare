@@ -48,6 +48,11 @@ Als eerst moeten deze commands geinstalleerd worden:
 - Opgeslagen projecten: 
 ![Schermafbeelding opgeslagenprojecten.png](docs/Screenshots/Schermafbeelding%20opgeslagenprojecten.png)<br>
 
+**Video**<br>
+https://github.com/user-attachments/assets/6c458c36-2465-4150-8450-11e8e062a6e0
+
+
+
 **Andere dingen die je wilt melden of belangrijk zijn**
 Dit is bij ons project niet van toepassing
 
@@ -57,6 +62,7 @@ Dit is bij ons project niet van toepassing
 https://github.com/Rac-Software-Development/wp4-2026-pwa-1c2-hyena/pull/10/changes
 
 - relevante Pull Requests Taha Ditta: 
+https://github.com/Rac-Software-Development/wp4-2026-pwa-1c2-hyena/pull/19
 
 - relevante Pull Requests Lucas Reedijk:
 https://github.com/Rac-Software-Development/wp4-2026-pwa-1c2-hyena/pull/24/changes 
