@@ -65,7 +65,7 @@ https://github.com/Rac-Software-Development/wp4-2026-pwa-1c2-hyena/pull/24/chang
 - Bronnenlijst Donovan Feller:
 [Bronvermelding_Donovan_Feller_1073598_WP4.pdf](docs/Bronnen/Bronvermelding_Donovan_Feller_1073598_WP4.pdf)
 - Bronnenlijst Taha Ditta: 
-
+[Bronnenlijst wp4 - Taha Ditta 1088007.docx](docs/Bronnen/Bronnenlijst%20wp4%20-%20Taha%20Ditta%201088007.docx)
 - Bronnenlijst Lucas Reedijk: 
 [Bronnenlijst Lucas Reedijk.docx](docs/Bronnen/Bronnenlijst%20Lucas%20Reedijk.docx)
 
