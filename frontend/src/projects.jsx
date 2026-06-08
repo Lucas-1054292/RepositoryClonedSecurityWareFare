@@ -30,6 +30,7 @@ function Projects() {
       setTimeout(() => setCopiedId(null), 2000); // Reset copiedId na 2 seconden weer terug naar de waarde null, zodat de bevestiging verdwijnt
     });
   };
+
   return (
     <>
       {/*header*/}
@@ -37,43 +38,53 @@ function Projects() {
          <h1>Projecten</h1>
          <p>Hieronder vindt u een overzicht van al uw beschikbare projecten.</p>
         </header>
+
       {/*main*/}
       <main className="projects-generic">
         <div className="project-wrapper">
-          <div className="projects-cards-grid">
+          <table className="projects-table">
 
+            <thead>
+            <tr>
+              <th>Functie</th>
+              <th>Bedrijf</th>
+              <th>Acties</th>
+              <th>Delen</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {/* map is used here to execute the code below on every item of the array from the API*/}
             {listings.map((listing) => (
-              <div key={listing.id} className="card projects-card">
+                <tr key={listing.id} className="card projects-card">
+                  <td>
+                    <h2>{listing.title}</h2>
+                  </td>
+                  <td>
+                    <p>{listing.company.name}</p>
+                  </td>
+                  <td>
+                    {/* When the button below is clicked then that listing id is used to send to the projects-details page*/}
+                    <button className="projects-details-button" onClick={() => handleDetails(listing.id)}>Details</button>
+                  </td>
+                  <td>
 
-                <div className="card-header">
-                  <h2>Functie: {listing.title}</h2>
-                  <p>Bedrijf: {listing.company.name}</p>
-                </div>
-
-                <div className="card-actions">
-                  <button
-                    className="projects-details-button"
-                    onClick={() => handleDetails(listing.id)}
-                  >
-                    Details
-                  </button>
-                  {"                                       "}
-                  <button
-                    className="projects-share-button"
-                    onClick={() => handleShare(listing.id)}
-                  >
-                    {copiedId === listing.id ? "Copied ✓" : "Share"}
-                  </button>
-                </div>
-
-              </div>
-            ))}
-
-          </div>
+                    <button
+                      className="projects-share-button"
+                      onClick={() => handleShare(listing.id)}
+                    >
+                      {copiedId === listing.id ? "Copied ✓" : "Share"}
+                      </button>
+                  </td>
+                </tr>
+              )
+            )}
+          </tbody>
+        </table>
         </div>
       </main>
     </>
-  );
+  )
 }
 
 export default Projects;
