@@ -28,9 +28,9 @@ export default defineConfig({
             options: {
               cacheName: 'api-cache',
               expiration: {
-                //cache api request: max 50 entries for 24 hours, network first
+                //cache api request: max 50 entries for 5 days, network first
                 maxEntries: 50,
-                maxAgeSeconds: 60 * 60 * 24,
+                maxAgeSeconds: 60 * 60 * 24 * 5,
               },
             },
           },

@@ -39,18 +39,21 @@ function ProjectDetails() {
     // get the current saved projects list from localstorage
     if (storageAvailable("localStorage")){
     const saved = JSON.parse(localStorage.getItem("savedProjects") || "[]");
+    const exists = saved.find((p) => p.id === listingId); //check if the project exists
 
     // create a new project object with relevant data
+    if (!exists){
     const NewProject = {
       id: listingId,
       title: listing.title,
-      companyName: listing.company?.name
+      companyName: listing.company?.name,
+      applied: false //only true if user clicks on 'solliciteren'
     };
-
     // add the new project to the list and save it in localstorage
     const newList =[...saved, NewProject]
     localStorage.setItem("savedProjects", JSON.stringify(newList))
-    setIsSaved(true);// update state so the button changes to "Opgeslagen"
+  }
+  setIsSaved(true);// update state so the button changes to "Opgeslagen"
 } else{
     setStorageError(true);
     }
