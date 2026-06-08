@@ -48,6 +48,11 @@ Als eerst moeten deze commands geinstalleerd worden:
 - Opgeslagen projecten: 
 ![Schermafbeelding opgeslagenprojecten.png](docs/Screenshots/Schermafbeelding%20opgeslagenprojecten.png)<br>
 
+**Video**<br>
+https://github.com/user-attachments/assets/6c458c36-2465-4150-8450-11e8e062a6e0
+
+
+
 **Andere dingen die je wilt melden of belangrijk zijn**
 Dit is bij ons project niet van toepassing
 
