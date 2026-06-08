@@ -62,6 +62,7 @@ Dit is bij ons project niet van toepassing
 https://github.com/Rac-Software-Development/wp4-2026-pwa-1c2-hyena/pull/10/changes
 
 - relevante Pull Requests Taha Ditta: 
+https://github.com/Rac-Software-Development/wp4-2026-pwa-1c2-hyena/pull/19
 
 - relevante Pull Requests Lucas Reedijk:
 https://github.com/Rac-Software-Development/wp4-2026-pwa-1c2-hyena/pull/24/changes 
