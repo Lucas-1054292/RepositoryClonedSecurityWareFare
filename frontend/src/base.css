@@ -182,6 +182,9 @@ html, body{
   background-image:
     linear-gradient(62deg, #c399f8 0%, #3e1496 100%);
     margin-bottom: 20px;
+  width: 850px;
+  height: 175px;
+  padding: 1.5rem;
 }
 
 .projects-wrapper{
@@ -220,54 +223,6 @@ html, body{
   grid-template-columns: repeat(3, 1fr);
 }
 
-.projects-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 18px;
-    table-layout: fixed;
-    font-weight: bold;
-}
-
-.projects-table thead{
-    background: #17181f;
-    color: #FFFFFF;
-    font-weight: bold;
-    padding-bottom: 16px;
-}
-
-.projects-table thead tr th:first-child{
-  border-radius: 1rem 0 0 ;
-}
-
-.projects-table thead tr th:last-child{
-  border-radius: 0 1rem 0 ;
-}
-
-
-
-.projects-table th,
-.projects-table td {
-    padding: 10px 20px;
-    text-align: center;
-}
-
-.projects-table td {
-    border-top: 2px solid #e0e0e0;
-}
-.projects-table tbody tr:last-child td:first-child{
-  border-radius: 0 0 0 1rem;
-  border-bottom:none;
-}
-
-.projects-table tbody tr:last-child td:last-child{
-  border-radius: 0 0 1rem 0;
-  border-bottom:none;
-}
-
-/*.projects-table tbody tr:hover {*/
-/*    background-color: #808080;*/
-/*}*/
-
 .projects-share-button{
     display: inline-flex;
     align-items: center;
@@ -282,7 +237,7 @@ html, body{
     text-decoration: none;
     width: 120px;
     height: 40px;
-    border: none;
+    border: 0.75rem;
 }
 
 .projects-details-button:disabled{
@@ -394,4 +349,11 @@ html, body{
   .saved-card-text{
     color: #000000;
   }
+}
+.card-header{
+  font-size: 25px;
+  font-weight: bold;
+}
+.card-actions {
+  text-align: right;
 }

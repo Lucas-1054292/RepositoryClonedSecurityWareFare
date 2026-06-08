@@ -8,7 +8,7 @@ function ProjectDetails() {
   const [isSaved, setIsSaved] = useState(false);
 
   const location = useLocation(); // location gives information about the page, later used to get the id from the listing
-  // const listingId = location.state?.listingId; // if the state exists then it accesses the listingId
+  //const listingId = location.state?.listingId; // if the state exists then it accesses the listingId
   const [storageError, setStorageError] = useState(false)
   const [searchParams] = useSearchParams() // if the state exists then it accesses the listingId
   const listingId = location.state?.listingId || searchParams.get("id"); //Reads from router state, or from a query (shared link)
@@ -61,7 +61,7 @@ function ProjectDetails() {
       {/*header*/}
         <header className="dashboard-header">
          <h1>Project details</h1>
-         <p>Hieronder vindt u de details bij uw aangeklikte project.</p>
+         <p>Hieronder vindt je de details bij uw aangeklikte project.</p>
         </header>
 
       {/*main*/}
