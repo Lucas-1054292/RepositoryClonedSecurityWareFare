@@ -30,7 +30,6 @@ function Projects() {
       setTimeout(() => setCopiedId(null), 2000); // Reset copiedId na 2 seconden weer terug naar de waarde null, zodat de bevestiging verdwijnt
     });
   };
-
   return (
     <>
       {/*header*/}

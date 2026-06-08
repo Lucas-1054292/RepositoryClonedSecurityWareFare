@@ -98,7 +98,6 @@ function ProjectDetails() {
                   <td>{listing.start_date}</td>
                   <td>{listing.contact.name}</td>
                   <td>{listing.contact.email}</td>
-
                   <td>
                     <Apply
                       listingId={listingId} jobTitle={listing.title} email={listing.contact.email} companyName={listing.company.name}/>
