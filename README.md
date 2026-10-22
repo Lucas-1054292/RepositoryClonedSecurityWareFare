@@ -4,6 +4,7 @@ __Gemaakt door:<br>__
 -Lucas Reedijk (1054292)<br>
 -Taha Ditta (1088007)<br>
 
+
 **Beschrijving:**<br>
 Wij als groep 1C2 Hyena's, hebben een PWA (Progessive Web Application) gebouwd genaamd RACademic hierin kunnen studenten alle beschikbare afstudeerprojecten kunnen zien.
 In deze applicatie kun je een overzicht van afstudeerprojecten, de functie, de naam van het bedrijf zien. Ook is er een details knop waarmee je extra informatie kan inzien bij een specifiek project daarnaast is er ook een share knop waarmee je een project kann delen met anderen.
